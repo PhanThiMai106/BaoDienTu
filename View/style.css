@@ -3,6 +3,7 @@ body{
   padding: 0;
   font-family: sans-serif;
   background: #34495e;
+
 }
 
 .box{
@@ -44,7 +45,7 @@ body{
 }
 
 
-.box input[type = "submit"]{
+.box input[type = "button"]{
   border: 0;
   background: none;
   display: block;
@@ -60,6 +61,6 @@ body{
   cursor: pointer;
 }
 
-.box input[type="submit"]:hover{
+.box input[type="button"]:hover{
   background: #23cc71;
 }

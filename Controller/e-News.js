@@ -104,3 +104,13 @@ function loadDate() {
 
 
 })();
+
+function ShowLoginForm(){
+
+  document.getElementById('box').style.display = 'block';
+}
+
+function Login(){
+  document.getElementById('box').style.display = "none";
+
+}

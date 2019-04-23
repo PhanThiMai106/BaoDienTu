@@ -7,20 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="D:/web/DoAn/LapTrinhWeb/BaoDienTu/View/e-News.css">
 
-
     <script src="D:/web/DoAn/LapTrinhWeb/BaoDienTu/Controller/e-News.js"></script>
 </head>
 <body onload="loadDate()">
+
 
     <div class = "infor">
         <div id="dateTime">  </div>
         <div>
         <ul id="contactUs">
-            <li><a>Contact Us</a></li>
-            <li><a>About Us</a></li>
+
+            <li><button type="button" name="button" >Contact Us</button></li>
+            <li><button type="button" name="button" >About Us</button></li>
+
+            <li><button type="button" name="button" onclick="ShowLoginForm()">Login</button></li>
+            <li><button type="button" name="button" onclick="ShowLoginForm()">Sign In</button></li>
         </ul>
       </div>
+
     </div>
+
+    <div id="box">
+      <form class="box" action="index.html" method="post">
+        <h1>Login</h1>
+        <input type="text" name="" placeholder="Username">
+        <input type="password" name="" value="" placeholder="Password">
+        <input type="button" onclick="Login()" name="" value="Login">
+      </form>
+    </div>
+
+
+
+
 <div class= "logo">
     <div>
         <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News"/></a>
@@ -35,9 +53,11 @@
                 <li><a href="#contact">SPORTS</a></li>
                 <li><a href="#contact">ENVIRONMENT</a></li>
       </ul>
-      <div style="float:right">
-         <button style="float:left" type="submit"></button> <input type="text" placeholder="Search.." name="search">
-   </div>
+      <div style="float:right" class = "menu-right">
+        <i class="fas fa-search" style="float: left"></i>
+    <!--      <button style="float:left" type="submit"></button> -->
+          <input type="text" placeholder="Search.." name="search">
+    </div>
 </div>
 
 <div class="slider" id="main-slider"><!-- outermost container element -->
