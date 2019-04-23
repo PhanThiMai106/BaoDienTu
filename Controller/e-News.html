@@ -1,54 +1,123 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>e-News</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="D:/web/DoAn/LapTrinhWeb/BaoDienTu/View/e-News.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>e-News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="C:/Users/ASUS/Documents/GitHub/BaoDienTu/View/e-News.css">
 
 
-    <script src="D:/web/DoAn/LapTrinhWeb/BaoDienTu/Controller/e-News.js"></script>
+  <script src="C:\Users\ASUS\Documents\GitHub\BaoDienTu\Controller/e-News.js"></script>
 </head>
+
 <body onload="loadDate()">
 
-    <div class = "infor">
-        <div id="dateTime">  </div>
-        <div>
-        <ul id="contactUs">
-            <li><a>Contact Us</a></li>
-            <li><a>About Us</a></li>
-        </ul>
+  <div class="infor">
+    <div id="dateTime"> </div>
+    <div>
+      <ul id="contactUs">
+        <li><a>Contact Us</a></li>
+        <li><a>About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="logo">
+    <div>
+      <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News" /></a>
+    </div>
+  </div>
+  <div class="menu">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#news">POLITICS&LAWS</a></li>
+      <li><a href="#contact">ECONOMY</a></li>
+      <li><a href="#contact">LIFE&STYLE</a></li>
+      <li><a href="#contact">SPORTS</a></li>
+      <li><a href="#contact">ENVIRONMENT</a></li>
+    </ul>
+    <div style="float:right">
+      <button style="float:left" type="submit"></button> <input type="text" placeholder="Search.." name="search">
+    </div>
+  </div>
+
+  <div class="slider" id="main-slider">
+    <!-- outermost container element -->
+    <div class="slider-wrapper">
+      <!-- innermost wrapper element -->
+      <img src="http://lorempixel.com/1024/400/animals" alt="First" class="slide" /><!-- slides -->
+      <img src="http://lorempixel.com/1024/400/business" alt="Second" class="slide" />
+      <img src="http://lorempixel.com/1024/400/city" alt="Third" class="slide" />
+    </div>
+  </div>
+
+<div class="card">
+    <div>
+      <h2 class="most-view-h2">Xem nhiều nhất
+        <a class="next" onclick="plusSlides(1)">&#10094;</a>
+        <a class="prev" onclick="plusSlides(-1)">&#10095;</a>
+      </h2>
+    </div>
+
+    <div class="column">
+      <div class="container-view">
+        <a class= "thumb-view" href="/politics-laws/518708/na-deputies-want-citizens-to-put-down-the-bottle.html" title="NA deputies want citizens to put down the bottle" >
+        <img src='http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/13/ttxvn1204thuong_vu_quoc_hoi.jpg' alt='NA deputies want citizens to put down the bottle'>
+        </a>
+
+        <h4 class="title-view">
+          <a href="//politics-laws/518708/na-deputies-want-citizens-to-put-down-the-bottle.html" title="NA deputies want citizens to put down the bottle">
+          NA deputies want citizens to put down the bottle
+          </a>
+        </h4>
       </div>
     </div>
-<div class= "logo">
-    <div>
-        <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News"/></a>
+
+    <div class="column">
+      <div class="container-view">
+        <a class= "thumb-view" href="/politics-laws/518708/na-deputies-want-citizens-to-put-down-the-bottle.html" title="NA deputies want citizens to put down the bottle" >
+        <img src='http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/13/ttxvn1204thuong_vu_quoc_hoi.jpg' alt='NA deputies want citizens to put down the bottle'>
+        </a>
+
+        <h4 class="title-view">
+          <a href="//politics-laws/518708/na-deputies-want-citizens-to-put-down-the-bottle.html" title="NA deputies want citizens to put down the bottle">
+          NA deputies want citizens to put down the bottle
+          </a>
+        </h4>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="container-view">
+        <a class= "thumb-view" href="/politics-laws/518708/na-deputies-want-citizens-to-put-down-the-bottle.html" title="NA deputies want citizens to put down the bottle" >
+        <img src='http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/13/ttxvn1204thuong_vu_quoc_hoi.jpg' alt='NA deputies want citizens to put down the bottle'>
+        </a>
+
+        <h4 class="title-view">
+          <a href="//politics-laws/518708/na-deputies-want-citizens-to-put-down-the-bottle.html" title="NA deputies want citizens to put down the bottle">
+          NA deputies want citizens to put down the bottle
+          </a>
+        </h4>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="container-view">
+        <a class= "thumb-view" href="/politics-laws/518708/na-deputies-want-citizens-to-put-down-the-bottle.html" title="NA deputies want citizens to put down the bottle" >
+        <img src='http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/13/ttxvn1204thuong_vu_quoc_hoi.jpg' alt='NA deputies want citizens to put down the bottle'>
+        </a>
+
+        <h4 class="title-view">
+          <a href="//politics-laws/518708/na-deputies-want-citizens-to-put-down-the-bottle.html" title="NA deputies want citizens to put down the bottle">
+          NA deputies want citizens to put down the bottle
+          </a>
+        </h4>
+      </div>
     </div>
 </div>
-<div class="menu">
-        <ul>
-                <li><a  href="#home">HOME</a></li>
-                <li><a href="#news">POLITICS&LAWS</a></li>
-                <li><a href="#contact">ECONOMY</a></li>
-                <li><a href="#contact">LIFE&STYLE</a></li>
-                <li><a href="#contact">SPORTS</a></li>
-                <li><a href="#contact">ENVIRONMENT</a></li>
-      </ul>
-      <div style="float:right">
-         <button style="float:left" type="submit"></button> <input type="text" placeholder="Search.." name="search">
-   </div>
-</div>
-
-<div class="slider" id="main-slider"><!-- outermost container element -->
-            <div class="slider-wrapper"><!-- innermost wrapper element -->
-                <img src="http://lorempixel.com/1024/400/animals" alt="First" class="slide" /><!-- slides -->
-                <img src="http://lorempixel.com/1024/400/business" alt="Second" class="slide" />
-                <img src="http://lorempixel.com/1024/400/city" alt="Third" class="slide" />
-            </div>
-        </div>
-
 
 
 </body>
+
 </html>
