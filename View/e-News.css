@@ -50,6 +50,11 @@
   display: none;
 }
 
+#main{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2px;
+}
 .box{
   width: 300px;
   padding: 40px;
@@ -349,4 +354,21 @@ button.social
 
 .slider-wrapper > .slide:first-child {
 	opacity: 1;
+}
+
+
+.stickyMenu{
+  top: 0;
+  position: sticky;
+  display: none;
+}
+
+
+.category{
+
+  margin-top: 5px;
+  border: 0.2px rgb(159, 240, 239);
+  height: 30px;
+  width: 80%;
+  background: rgb(174, 231, 231);
 }

@@ -131,3 +131,22 @@ function SignUp(){
   document.getElementById('main').style.display = "block";
 
 }
+
+function home(){
+  document.getElementById('category').innerHTML= 'Viet Nam News > Home';
+}
+function politic(){
+  document.getElementById('category').innerHTML= 'Viet Nam News > Politics&Laws';
+}
+function economy(){
+  document.getElementById('category').innerHTML= 'Viet Nam News > Economy';
+}
+function life(){
+  document.getElementById('category').innerHTML= 'Viet Nam News > Life&Style';
+}
+function sport(){
+  document.getElementById('category').innerHTML= 'Viet Nam News > Sports';
+}
+function environment(){
+  document.getElementById('category').innerHTML= 'Viet Nam News > Environment';
+}
