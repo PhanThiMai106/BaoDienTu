@@ -1,0 +1,136 @@
+
+
+.infor{
+    background: gray;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+#dateTime{
+    margin: 15px 50px;
+    width: 70%;
+}
+
+#contactUs{
+    display: flex;
+    justify-content: flex-end;
+ }
+
+#contactUs li{
+    display: inline;
+    margin-left: 20px;
+}
+
+.logo{
+    width: 100px;
+    margin: 25px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #4CAF50;
+    float: left;
+    width: 100%;
+  }
+  
+  .menu li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  .menu li:last-child {
+    border-right: none;
+  }
+  
+  .menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .menu li a:hover:not(.active) {
+    background-color: #0e7e14;
+  }
+  
+  .menu div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+
+
+.content{
+  margin-left: 150px; 
+  
+}
+
+.myCarousel{
+  width: 300%;
+}
+
+.leftcolumn {
+  float: left;
+  width: 60%;
+  margin-top: 20px;
+}
+.rightcolumn {
+  margin-top: 20px;
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+ .listCard{ 
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  position: relative;
+}
+
+.listCard .bg-dark text-white{
+  width: 30%;
+
+}
+
+.card{
+  margin: 5px;
+}
+
+
+.categories{ 
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+ .cardColumn1{
+  float: left;
+  width: 50%;
+}
+
+ .cardColumn2{
+  float: right;
+  width: 50%;
+}
+
+.cardColumn2 .card{
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardColumn2 img{
+  width: 50%;
+}
+
+.kind{
+  margin-top: 20px;
+}
