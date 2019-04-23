@@ -250,6 +250,7 @@ button.social{
 
 }
 
+
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -292,6 +293,28 @@ button.social{
     height: 46px;
 }
 
+.smenu{
+  display: none;
+}
+
+.menu a{
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/*
+.smenu a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .smenu {
+  display: block;
+}
+*/
 .row-search{
   display: flex;
   flex-direction: row;
@@ -316,6 +339,7 @@ button.social{
   background: rgb(208, 233, 223);
   overflow-x: hidden;
     list-style-type: none;
+    display: none;
 }
 
 .stickyMenu a {
@@ -330,19 +354,74 @@ button.social{
 
 .stickyMenu a:hover {
   cursor: pointer;
+  text-decoration: none;
+
 }
+
 .stickyMenu li{
   border-top:  1px solid #2980b9;
   text-decoration: none;
 
 }
 
-.category{
+.item{
+  border-top: 1px solid #2980b9;
+  overflow: hidden;
+}
 
+.smenu1{
+  background: #333;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+.smenu1 a{
+  display: block;
+  padding: 16px 26px;
+  color: white;
+  font-size: 14px;
+  margin : 4px 0;
+  position: relative;
+
+}
+
+.smenu1 a:before{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #3498db;
+  left: 0;
+  top :  0;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.smenu1 a:hover:before{
+  opacity: 1;
+}
+
+.item:target .smenu1{
+  max-height: 10em;
+}
+
+
+.top{
+  background: rgb(53, 32, 221);
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+
+.category{
+  display: none;
   margin-top: 5px;
   border: 0.2px rgb(159, 240, 239);
   height: 30px;
-    width: 55%;
+    width: 65%;
   background: rgb(174, 231, 231);
 }
 
@@ -359,6 +438,7 @@ button.social{
   float: left;
   width: 60%;
   margin-top: 20px;
+  bottom: 50px
 }
 
 .rightcolumn {
@@ -367,6 +447,7 @@ button.social{
   width: 25%;
   background-color: #f1f1f1;
   padding-left: 20px;
+  bottom: 50px;
 }
 
 .listCard{
@@ -415,4 +496,17 @@ button.social{
 
 .kind{
   margin-top: 20px;
+}
+
+.footer{
+  display: none;
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    color: white;
+    text-align: center;
+
 }

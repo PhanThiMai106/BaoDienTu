@@ -68,20 +68,54 @@ function SignUp(){
 }
 
 function home(){
-  document.getElementById('category').innerHTML= 'Viet Nam News > Home';
+  document.getElementById('category').style.display = 'none';
 }
 function politic(){
+    document.getElementById('category').style.display = 'block';
   document.getElementById('category').innerHTML= 'Viet Nam News > Politics&Laws';
 }
 function economy(){
+  document.getElementById('category').style.display = 'block';
+
   document.getElementById('category').innerHTML= 'Viet Nam News > Economy';
 }
 function life(){
+  document.getElementById('category').style.display = 'block';
+
   document.getElementById('category').innerHTML= 'Viet Nam News > Life&Style';
 }
 function sport(){
+  document.getElementById('category').style.display = 'block';
+
   document.getElementById('category').innerHTML= 'Viet Nam News > Sports';
 }
 function environment(){
+  document.getElementById('category').style.display = 'block';
+
   document.getElementById('category').innerHTML= 'Viet Nam News > Environment';
+}
+
+
+
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (document.body.scrollTop >= 2000 || document.documentElement.scrollTop >= 2000) {
+      document.getElementById("footer").style.display = "block";
+    }else{
+      document.getElementById("footer").style.display = "none";
+
+    }
+    document.getElementById("stickyMenu").style.display = "block";
+  } else {
+    document.getElementById("stickyMenu").style.display = "none";
+  }
+
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
