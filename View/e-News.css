@@ -43,14 +43,14 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:  #4CAF50;
+    background-color:  #7bbde7;
     float: left;
     width: 80%;
   }
 
   .menu li {
     float: left;
-    border-right:1px solid #bbb;
+    border-right:1px solid rgb(68, 183, 190);
   }
 
   .menu li:last-child {
@@ -66,7 +66,7 @@
   }
 
   li a:hover:not(.active) {
-    background-color: #0e7e14;
+    background-color: rgb(38, 123, 171);
   }
 
 .menu input[type=text] {
@@ -81,7 +81,7 @@
     float: right;
     padding: 6px 10px;
     margin-top: 8px;
-    background: #ddd;
+    background:#7bbde7;
     font-size: 17px;
     border: none;
     width: 13%;
@@ -89,7 +89,7 @@
   }
 
   .menu div{
-    background-color:  #4CAF50;
+    background-color: #7bbde7;
     width: 20%;
     height: 46px;
 }
