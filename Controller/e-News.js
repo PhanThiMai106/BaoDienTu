@@ -1,7 +1,7 @@
 
 
 var loadDay =  function (i){
-  
+
     if(i === 1)
 {  alert(1);
           return Monday;
@@ -22,8 +22,19 @@ var loadDay =  function (i){
 }
 
 function loadDate() {
+  var weekday = new Array(7);
+   weekday[0] = "Sunday";
+   weekday[1] = "Monday";
+   weekday[2] = "Tuesday";
+   weekday[3] = "Wednesday";
+   weekday[4] = "Thursday";
+   weekday[5] = "Friday";
+   weekday[6] = "Saturday";
+
     var today = new Date();
-    var date = today.getDate()  + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+
+     var n = weekday[today.getDay()];
+    var date =  n + ',' + today.getDate()  + ' - ' + (today.getMonth() + 1) + ' - ' + today.getFullYear();
     document.getElementById("dateTime").innerHTML = date;
 }
 
@@ -33,7 +44,7 @@ function loadDate() {
 		this.el = document.querySelector( element );
 		this.init();
 	}
-	
+
 	Slideshow.prototype = {
 		init: function() {
 			this.wrapper = this.el.querySelector( ".slider-wrapper" );
@@ -43,14 +54,14 @@ function loadDate() {
 			this.index = 0;
 			this.total = this.slides.length;
 			this.timer = null;
-			
+
 			this.action();
-			this.stopStart();	
+			this.stopStart();
 		},
 		_slideTo: function( slide ) {
 			var currentSlide = this.slides[slide];
 			currentSlide.style.opacity = 1;
-			
+
 			for( var i = 0; i < this.slides.length; i++ ) {
 				var slide = this.slides[i];
 				if( slide !== currentSlide ) {
@@ -66,7 +77,7 @@ function loadDate() {
 					self.index = 0;
 				}
 				self._slideTo( self.index );
-				
+
 			}, 1000);
 		},
 		stopStart: function() {
@@ -74,22 +85,22 @@ function loadDate() {
 			self.el.addEventListener( "mouseover", function() {
 				clearInterval( self.timer );
 				self.timer = null;
-				
+
 			}, false);
 			self.el.addEventListener( "mouseout", function() {
 				self.action();
-				
+
 			}, false);
 		}
-		
-		
+
+
 	};
-	
+
 	document.addEventListener( "DOMContentLoaded", function() {
-		
+
 		var slider = new Slideshow( "#main-slider" );
-		
+
 	});
-	
-	
+
+
 })();
