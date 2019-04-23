@@ -12,63 +12,88 @@
 <body onload="loadDate()">
 
 
-    <div class = "infor">
-        <div id="dateTime">  </div>
-        <div>
-        <ul id="contactUs">
+  <div id="box">
+    <form class="box" action="index.html" method="post">
+      <h1>Login</h1>
+      <input type="text" name="" placeholder="Username">
+      <input type="password" name="" value="" placeholder="Password">
+      <input type="button" onclick="Login()" name="" value="Login">
+    </form>
+  </div>
 
-            <li><button type="button" name="button" >Contact Us</button></li>
-            <li><button type="button" name="button" >About Us</button></li>
+  <div id="signIn">
+    <div class="left-box">
+      <h1>Sign Up</h1>
 
-            <li><button type="button" name="button" onclick="ShowLoginForm()">Login</button></li>
-            <li><button type="button" name="button" onclick="ShowLoginForm()">Sign In</button></li>
-        </ul>
-      </div>
+      <input type="text" name="username" placeholder="Username"/>
+      <input type="text" name="email" placeholder="Email"/>
+      <input type="password" name="password" placeholder="Password"/>
+
+      <input type="password" name="password2" placeholder="Retype password"/>
+
+      <input type="button" name="signup-button" onclick="SignUp()" value="Sign Up"/>
 
     </div>
+    <div class="right-box">
+      <span class="signinwith">Sign in with<br/>Social Network     </span>
 
-    <div id="box">
-      <form class="box" action="index.html" method="post">
-        <h1>Login</h1>
-        <input type="text" name="" placeholder="Username">
-        <input type="password" name="" value="" placeholder="Password">
-        <input type="button" onclick="Login()" name="" value="Login">
-      </form>
+    <button class="social facebook">Log in with Facebook</button>
+    <button class="social twitter">Log in with Twitter</button>
+    <button class="social google">Log in with Google+</button>
+    </div>
+      <div class="or">OR</div>
+  </div>
+
+<div id="main">
+  <div class = "infor">
+      <div id="dateTime">  </div>
+      <div>
+      <ul id="contactUs">
+
+          <li><button type="button" name="button" >Contact Us</button></li>
+          <li><button type="button" name="button" >About Us</button></li>
+
+          <li><button type="button" name="button" onclick="ShowLoginForm()">Login</button></li>
+          <li><button type="button" name="button" onclick="ShowSignUpForm()">Sign Up</button></li>
+      </ul>
     </div>
 
+  </div>
 
 
 
 <div class= "logo">
-    <div>
-        <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News"/></a>
-    </div>
+  <div>
+      <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News"/></a>
+  </div>
 </div>
 <div class="menu">
-        <ul>
-                <li><a  href="#home">HOME</a></li>
-                <li><a href="#news">POLITICS&LAWS</a></li>
-                <li><a href="#contact">ECONOMY</a></li>
-                <li><a href="#contact">LIFE&STYLE</a></li>
-                <li><a href="#contact">SPORTS</a></li>
-                <li><a href="#contact">ENVIRONMENT</a></li>
-      </ul>
-      <div style="float:right" class = "menu-right">
-        <i class="fas fa-search" style="float: left"></i>
-    <!--      <button style="float:left" type="submit"></button> -->
-          <input type="text" placeholder="Search.." name="search">
-    </div>
+      <ul>
+              <li><a  href="#home">HOME</a></li>
+              <li><a href="#news">POLITICS&LAWS</a></li>
+              <li><a href="#contact">ECONOMY</a></li>
+              <li><a href="#contact">LIFE&STYLE</a></li>
+              <li><a href="#contact">SPORTS</a></li>
+              <li><a href="#contact">ENVIRONMENT</a></li>
+    </ul>
+    <div style="float:right" class = "menu-right">
+      <i class="fas fa-search" style="float: left"></i>
+  <!--      <button style="float:left" type="submit"></button> -->
+        <input type="text" placeholder="Search.." name="search">
+  </div>
 </div>
 
 <div class="slider" id="main-slider"><!-- outermost container element -->
-            <div class="slider-wrapper"><!-- innermost wrapper element -->
-                <img src="http://lorempixel.com/1024/400/animals" alt="First" class="slide" /><!-- slides -->
-                <img src="http://lorempixel.com/1024/400/business" alt="Second" class="slide" />
-                <img src="http://lorempixel.com/1024/400/city" alt="Third" class="slide" />
-            </div>
-        </div>
+          <div class="slider-wrapper"><!-- innermost wrapper element -->
+              <img src="http://lorempixel.com/1024/400/animals" alt="First" class="slide" /><!-- slides -->
+              <img src="http://lorempixel.com/1024/400/business" alt="Second" class="slide" />
+              <img src="http://lorempixel.com/1024/400/city" alt="Third" class="slide" />
+          </div>
+      </div>
 
 
 
 </body>
+</div>
+
 </html>

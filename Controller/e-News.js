@@ -108,9 +108,26 @@ function loadDate() {
 function ShowLoginForm(){
 
   document.getElementById('box').style.display = 'block';
+  document.getElementById('main').style.display = "none";
+
 }
 
 function Login(){
   document.getElementById('box').style.display = "none";
+  document.getElementById('main').style.display = "block";
+
+
+
+}
+
+function ShowSignUpForm(){
+  document.getElementById('signIn').style.display = "block";
+  document.getElementById('main').style.display = "none";
+
+}
+
+function SignUp(){
+  document.getElementById('signIn').style.display = "none";
+  document.getElementById('main').style.display = "block";
 
 }
