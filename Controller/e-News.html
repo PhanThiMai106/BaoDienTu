@@ -7,10 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="D:/web/DoAn/LapTrinhWeb/BaoDienTu/View/e-News.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+
+
+<!--
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+-->
 
     <script src="D:/web/DoAn/LapTrinhWeb/BaoDienTu/Controller/e-News.js"></script>
 </head>
@@ -79,24 +94,210 @@
                 <li><a href="#contact" onclick="economy()">ECONOMY</a></li>
                 <li><a href="#contact" onclick="life()">LIFE & STYLE</a></li>
                 <li><a href="#contact"onclick="sport()">SPORTS</a></li>
-                <li><a href="#contact" onclick="environment()">ENVIRONMENT</a></li>
-      </ul>
-      <div style="float:right" class = "menu-right">
-        <i class="fas fa-search" style="float: left"></i>
-        <input type="text" placeholder="Search.." name="search">
-     </div><!-- end of search -->
+                <li style="float:right ">
+                    <div class="row-search  d-flex aligns-item-center">
+                         <i class="fas fa-search btn-s" ></i>
+                         <input class="m-0 input-s" type="text" placeholder="Search.." >
+                    </div>
+                </li>
 
+         </ul>
   </div><!-- end of menu -->
   <div  id="category" class="category">Viet Nam News ></div>
 
   <div class="home" id="home">
-    <div class="home-column1" id="home-column1">
+    <div class="leftcolumn" id="leftcolumn">
+        <div id="myCarousel" class="carousel slide bg-inverse w-100 ml-auto mr-auto" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
 
-    </div><!-- end of home-column 1 -->
-    <div class="home-column2" id="home-column2">
+                    <a href="https://vietnamnews.vn/" target="https://vietnamnews.vn/"><img class="d-block w-100"
+                            src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/23/dien.jpg"
+                            alt="Banks offer free services to lure customers" /></a>
 
-  </div>
+                    <div class="carousel-caption">
+                        <h3>First slide</h3>
+                        <p>This is the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://vietnamnews.vn/" target="https://vietnamnews.vn/"><span><img
+                                class="d-block w-100" src="img_nature_wide.jpg.png"
+                                alt="Banks offer free services to lure customers" /></a>
 
+                    <div class="carousel-caption">
+                        <h3>Second slide</h3>
+                        <p>This is the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://vietnamnews.vn/" target="https://vietnamnews.vn/"><span><img
+                                class="d-block w-100" src="img_snow_wide.jpg.png"
+                                alt="Banks offer free services to lure customers" /></a>
+
+                    <div class="carousel-caption">
+                        <h3>Third slide</h3>
+                        <p>This is the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div> <!-- end of class="carousel slide bg-inverse w-100 ml-auto mr-auto" -->
+        <div class="listCard">
+            <div class="card bg-dark text-white">
+                <img src="img_nature_wide.jpg.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text .</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div> <!-- end of card-img-overlay -->
+            </div> <!-- end of card bg-dark text-white -->
+            <div class="card bg-dark text-white">
+                <img src="img_nature_wide.jpg.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+            </div> <!-- end of  class="card bg-dark text-white" -->
+            <div class="card bg-dark text-white">
+                <img src="img_nature_wide.jpg.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting.</p>
+                    <p class="card-text">Last updated 3 mins ago</p>
+                </div>
+            </div> <!-- end of class="card bg-dark text-white" -->
+        </div> <!-- end of list card -->
+        <div class="highlight">
+            <h2><b>HIGHLIGHT</b></h2>
+            <div class="listCard">
+                <div class="card" style="width: 18rem;">
+                    <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk
+                            of the card's content.</p>
+                    </div> <!-- end of card-body -->
+                </div> <!-- end of card -->
+                <div class="card" style="width: 18rem;">
+                    <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk
+                            of the card's content.</p>
+                    </div><!-- end of card body -->
+                </div> <!-- end of card  -->
+                <div class="card" style="width: 18rem;">
+                    <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk
+                            of the card's content.</p>
+                    </div><!-- end of card body -->
+                </div><!-- end of card  -->
+            </div> <!-- end of list card -->
+        </div> <!--  end of hightlight -->
+        <div class="kind">
+            <h2><b>POLISTICS&LAW</b></h2>
+            <div class="categories">
+                <div class="cardColumn1">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                        </div><!-- end of card body -->
+                    </div> <!-- end of card  -->
+                </div> <!-- end of card column 1  -->
+                <div class="cardColumn2" style="float:right">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                            </p>
+                        </div><!-- end of card body -->
+                    </div> <!--  end of card  -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                            </p>
+                        </div><!--  end of card body -->
+                    </div><!-- end of card  -->
+
+                </div><!--  end of card column 2 -->
+
+            </div><!--  end of categories -->
+        </div> <!--  end of kind  -->
+
+        <div class="kind">
+            <h2><b>SOCIETY</b></h2>
+            <div class="categories">
+                <div class="cardColumn1">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardColumn2" style="float:right">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div> <!-- end of left column -->
+
+    <div></div>
+    <div class="rightcolumn">
+        <div class="card" style="width: 18rem;">
+            <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                    of the card's content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="img_nature_wide.jpg.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                    of the card's content.</p>
+            </div>
+        </div>
+
+    </div> <!--  end of right column -->
 
 <div class="stickyMenu">
 

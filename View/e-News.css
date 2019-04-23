@@ -2,7 +2,6 @@
   margin:0;
   padding: 0;
   font-family: sans-serif;
-
 }
 
 .infor{
@@ -56,6 +55,7 @@
   margin-left: 50px;
   margin-right: 150px;
 }
+
 .box{
   width: 300px;
   padding: 40px;
@@ -117,8 +117,6 @@
 }
 
 
-
-
 #signIn{
   position: relative;
   margin: 5% auto;
@@ -149,8 +147,7 @@ h1
 }
 
 input[type="text"],
-input[type="password"]
-{
+input[type="password"]{
     display: block;
     box-sizing: border-box;
     margin-bottom: 20px;
@@ -166,8 +163,7 @@ input[type="password"]
     transition: 0.2s ease;
 }
 
-input[type="button"]
-{
+input[type="button"]{
     margin-bottom: 28px;
     width: 120px;
     height: 32px;
@@ -184,14 +180,12 @@ input[type="button"]
 }
 
 input[type="button"]:hover,
-input[type="button"]:focus
-{
+input[type="button"]:focus{
     background: #ff5722;
     transition: 0.2s ease;
 }
 
-.or
-{
+.or{
     position: absolute;
     top: 180px;
     left: 280px;
@@ -204,8 +198,7 @@ input[type="button"]:focus
     text-align: center;
 }
 
-.right-box
-{
+.right-box{
     position: absolute;
     top: 0;
     right: 0;
@@ -218,10 +211,7 @@ input[type="button"]:focus
     background-position: center;
 }
 
-
-
-.right-box .signinwith
-{
+.right-box .signinwith{
     display: block;
     margin-bottom: 40px;
     font-size: 28px;
@@ -231,8 +221,7 @@ input[type="button"]:focus
 }
 
 
-button.social
-{
+button.social{
     margin-bottom: 20px;
     width: 220px;
     height: 36px;
@@ -245,19 +234,15 @@ button.social
     cursor: pointer;
 }
 
-.facebook
-{
+.facebook{
     background: #32508e;
 }
-.twitter
-{
+.twitter{
     background: #55acee;
 }
-.google
-{
+.google{
     background: #dd4b39;
 }
-
 
 .logo{
     width: 100px;
@@ -272,7 +257,7 @@ button.social
     overflow: hidden;
     background-color:  rgb(32, 136, 175);
     float: left;
-    width: 80%;
+    width: 100%;
   }
 
   .menu li {
@@ -294,35 +279,33 @@ button.social
     text-decoration: none;
   }
 
-
-.menu-right{
-  display: flex;
-  flex-direction: row;
-}
-.menu-right i{
-  float: right;
-padding-left: 0;
-padding-top: 8px;
-font-size: 17px;
-border: none;
-width: 13%;
+.menu input{
+  width: 180px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  margin: 0;
 }
 
-.menu-right input[type=text] {
-    padding: 5px;
-    margin-top: 8px;
-    margin-right: 30px;
-    margin-bottom: 2px;
-    font-size: 13px;
-
-}
-
-  .menu div{
+.menu div{
     background-color:rgb(32, 136, 175);
     width: 20%;
     height: 46px;
 }
 
+.row-search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.btn-s{
+  background: #fff;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  height: 32px;
+
+
+}
 
 .stickyMenu {
   width: 120px;
@@ -333,9 +316,7 @@ width: 13%;
   background: rgb(208, 233, 223);
   overflow-x: hidden;
     list-style-type: none;
-/*  padding: 8px 0;*/
 }
-
 
 .stickyMenu a {
  padding: 6px 8px 6px 16px;
@@ -366,12 +347,72 @@ width: 13%;
 }
 
 .home{
+
+  margin-left: 150px;
+}
+
+.myCarousel{
+  width: 300%;
+}
+
+.leftcolumn {
+  float: left;
+  width: 60%;
+  margin-top: 20px;
+}
+
+.rightcolumn {
+  margin-top: 20px;
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+.listCard{
+ display: flex;
+ flex-direction: row;
+ justify-content:space-between;
+ position: relative;
+}
+
+
+.listCard .bg-dark text-white{
+  width: 30%;
+
+}
+
+.card{
+  margin: 5px;
+}
+
+
+.categories{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content:space-between;
 }
-.home-column1{
-  width: 55%;
+
+ .cardColumn1{
+  float: left;
+  width: 50%;
 }
-.home-column1{
-  width: 40%;
+
+ .cardColumn2{
+  float: right;
+  width: 50%;
+}
+
+.cardColumn2 .card{
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardColumn2 img{
+  width: 50%;
+}
+
+.kind{
+  margin-top: 20px;
 }
