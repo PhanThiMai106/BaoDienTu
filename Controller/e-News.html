@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>e-News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="D:/web/DoAn/LapTrinhWeb/BaoDienTu/View/e-News.css">
+    <link rel="stylesheet" href="D:/web/DoAn/LapTrinhWeb/BaoDienTu/View/e-News.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="D:/web/DoAn/LapTrinhWeb/BaoDienTu/Controller/e-News.js"></script>
 </head>
@@ -64,31 +69,34 @@
     <div>
         <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News"/></a>
     </div>
+
+
   </div><!-- end of logo -->
   <div class="menu">
         <ul>
                 <li><a  href="#home" onclick="home()" >HOME</a></li>
-                <li><a href="#news" onclick="politic()">POLITICS&LAWS</a></li>
+                <li><a href="#news" onclick="politic()">POLITICS & LAWS</a></li>
                 <li><a href="#contact" onclick="economy()">ECONOMY</a></li>
-                <li><a href="#contact" onclick="life()">LIFE&STYLE</a></li>
+                <li><a href="#contact" onclick="life()">LIFE & STYLE</a></li>
                 <li><a href="#contact"onclick="sport()">SPORTS</a></li>
                 <li><a href="#contact" onclick="environment()">ENVIRONMENT</a></li>
       </ul>
       <div style="float:right" class = "menu-right">
         <i class="fas fa-search" style="float: left"></i>
-          <input type="text" placeholder="Search.." name="search">
+        <input type="text" placeholder="Search.." name="search">
      </div><!-- end of search -->
+
   </div><!-- end of menu -->
   <div  id="category" class="category">Viet Nam News ></div>
 
-  <div class="slider" id="main-slider"><!-- outermost container element -->
-                <div class="slider-wrapper"><!-- innermost wrapper element -->
-                    <img src="http://lorempixel.com/1024/400/animals" alt="First" class="slide" /><!-- slides -->
-                    <img src="http://lorempixel.com/1024/400/business" alt="Second" class="slide" />
-                    <img src="http://lorempixel.com/1024/400/city" alt="Third" class="slide" />
-                </div>
+  <div class="home" id="home">
+    <div class="home-column1" id="home-column1">
 
-                </div><!-- end of slider -->
+    </div><!-- end of home-column 1 -->
+    <div class="home-column2" id="home-column2">
+
+  </div>
+
 
 <div class="stickyMenu">
   <li><a  href="#home" onclick="home()" >HOME</a></li>
