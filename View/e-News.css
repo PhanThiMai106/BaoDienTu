@@ -357,12 +357,33 @@ button.social
 }
 
 
-.stickyMenu{
-  top: 0;
-  position: sticky;
-  display: none;
+.stickyMenu {
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 250px;
+  right: 10px;
+  background: rgb(208, 233, 223);
+  overflow-x: hidden;
+/*  padding: 8px 0;*/
 }
 
+.stickyMenu a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  color: rgb(16, 28, 196);
+  display: block;
+  
+}
+
+.stickyMenu a:hover {
+  cursor: pointer;
+}
+.stickyMenu li{
+  border-top:  1px solid #2980b9;
+
+}
 
 .category{
 
