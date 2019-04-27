@@ -261,10 +261,11 @@ button.social{
     width: 100%;
   }
 
-  .menu li {
+  .menu li
+  {
     float: left;
     border-right:1px solid rgb(68, 183, 190);
-  text-decoration: none;
+      text-decoration: none;
   }
 
   .menu li:last-child {
@@ -498,15 +499,59 @@ button.social{
   margin-top: 20px;
 }
 
+
+
 .footer{
   display: none;
-  position: fixed;
+/*  position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 50px;
-    background-color: red;
-    color: white;
-    text-align: center;
+    */
+    background-color: rgb(236, 237, 226);
+    width: 100%;
+    clear: both;
+     position: relative;
+     height: 100px;
+     margin-top: -40px;
+}
 
+.footer h4{
+  color: white;
+  text-align: left;
+  background-color: rgb(22, 55, 228);
+}
+
+
+.footerExplore1 ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.footerExplore1 li{
+  text-align: center;
+
+}
+
+
+.footerExplore1 li a{
+  text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 90px;
+    margin-right: 5px;
+    color:  rgb(22, 55, 228);
+    font-weight: bold;
+    border-right: 1px solid  rgb(22, 55, 228);
+}
+
+.footerExplore1 li:last-child a{
+  border-right: none;
+}
+
+
+.footerExplore2 p {
+  position: relative;
+
+  text-align: center;
 }
