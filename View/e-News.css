@@ -250,7 +250,6 @@ button.social{
 
 }
 
-
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -261,25 +260,57 @@ button.social{
     width: 100%;
   }
 
-  .menu li
-  {
-    float: left;
-    border-right:1px solid rgb(68, 183, 190);
-      text-decoration: none;
-  }
+.dropdown{
+  float: left;
+  border-right:1px solid rgb(68, 183, 190);
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
 
-  .menu li:last-child {
-    border-right: none;
-    text-decoration: none;
-  }
+.dropdown last-child{
+  border-right: none;
+  text-decoration: none;
+}
 
-  .menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+.smenu{
+
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown a{
+  display: block;;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: none;
+}
+
+.dropdown a:hover{
+  text-decoration: none;
+}
+
+.dropdown a:hover .smenu{
+  display: block;
+}
+.smenu a{
+  color: inherit;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.smenu a:hover{
+  background-color: rgb(59, 131, 207);
+
+}
+
+
 
 .menu input{
   width: 180px;
@@ -294,28 +325,7 @@ button.social{
     height: 46px;
 }
 
-.smenu{
-  display: none;
-}
 
-.menu a{
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/*
-.smenu a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .smenu {
-  display: block;
-}
-*/
 .row-search{
   display: flex;
   flex-direction: row;
@@ -502,18 +512,18 @@ button.social{
 
 
 .footer{
-  display: none;
-/*  position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    */
-    background-color: rgb(236, 237, 226);
-    width: 100%;
-    clear: both;
-     position: relative;
-     height: 100px;
-     margin-top: -40px;
+    display: none;
+      /*  position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          */
+      background-color: rgb(236, 237, 226);
+      width: 100%;
+      clear: both;
+       position: relative;
+       height: 100px;
+       margin-top: -40px;
 }
 
 .footer h4{
