@@ -304,8 +304,8 @@
     <div class="card-body1">
       <!-- tab 1 latest -->
       <div class="menu-tab-sidebar">
-            <a id="tab1" class="act-tab-sidebar" href="javascript:;" onclick="showTabMRight('tab1');"> Latest</a>
-            <a id="tab2" href="javascript:;" onclick="showTabMRight('tab2');">Most Read</a>
+            <a id="tab1" class="act-tab-sidebar" href="javascript:;" onclick="showTabMRight('tab1');"> LATEST</a>
+            <a id="tab2" href="javascript:;" onclick="showTabMRight('tab2');">MOST READ</a>
         </div>
         <div class="content-sidebar" id="tab1Content">
             <ul class="link-sidebar">
@@ -342,6 +342,59 @@
 
             </ul>
         </div>
+        <!-- most Read -->
+        <div class="content-sidebar" id="tab2Content">
+            <ul class="link-sidebar">
+              <li><a href="/politics-laws/519189/pm-phuc-meets-chinese-party-chief-and-president-xi-jinping-in-beijing.html">
+                          &raquo;  PM Phúc meets Chinese Party chief and President Xi Jinping in Beijing</a>
+                          <hr>
+                        </li>
+
+                        <li><a href="/economy/519186/noi-bai-airport-to-expand-to-handle-100-million-passengers-by-2050.html">
+                          &raquo;  Nội Bài Airport to expand to handle 100 million passengers by 2050</a>
+                          <hr>
+                        </li>
+
+                        <li><a href="/society/519236/ha-noi-faces-summer-water-shortages.html">
+                          &raquo;  Hà Nội faces summer water shortages</a>
+                          <hr>
+                        </li>
+
+                        <li><a href="/economy/519175/fdi-reaches-record-level-in-four-months.html">
+                          &raquo;  FDI reaches record level in four months</a>
+                          <hr>
+                        </li>
+
+                        <li><a href="/society/519188/hcm-city-to-ban-vehicles-in-centre-on-holidays.html">
+                          &raquo;  HCM City to ban vehicles in centre on holidays</a>
+                          <hr>
+                        </li>
+
+                        <li><a href="/economy/519181/cptpp-smooths-path-to-canadian-market-for-vietnamese-goods.html">
+                          &raquo;  CPTPP smooths path to Canadian market for Vietnamese goods</a>
+                          <hr>
+                        </li>
+                          </ul>
+      </div>
+
+
+
+        <script type="text/javascript">
+            var arrTabs = new Array("tab1", "tab2");
+            var currentTab = "tab1";
+            function showTabMRight(tab) {
+                // set current tab
+                currentTab = tab;
+                // disable all tab
+                for (var i = 0; i < arrTabs.length; i++) {
+                    document.getElementById(arrTabs[i]).className = "";
+                    document.getElementById(arrTabs[i] + "Content").style.display = "none";
+                }
+                // show current tab
+                document.getElementById(currentTab).className = "act-tab-sidebar";
+                document.getElementById(currentTab + "Content").style.display = "block";
+            }
+        </script>
 
     </div>
   </div>

@@ -613,6 +613,7 @@ button.social{
 /*  link -sidebar các bài viết latest*/
 .link-sidebar{
   margin-left: 10px;
+  height: 400px;
 }
 .link-sidebar li {
 
@@ -623,6 +624,10 @@ button.social{
   list-style: none;
   color: black;
 }
+.link-sidebar li a hr{
+
+}
+
 .link-sidebar li a:hover{
   color:blue;
 }
