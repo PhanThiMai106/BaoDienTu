@@ -513,7 +513,7 @@ button.social{
 
 /* Phi e-news-1 */
 .bg-body1{
-  background-color: rgb(145, 188, 238);
+  background-color:rgb(176, 219, 240);
   list-style:none;
   padding: 8px 0 8px 15px;
   display: flex;
@@ -546,9 +546,9 @@ button.social{
 }
 .card-body1{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 5px;
+  padding: 0px;
   text-align: left;
-  background-color: #f1f1f1;
+  background-color: rgb(176, 219, 240);
 }
 .img-body1{
   width:100%;
@@ -557,7 +557,7 @@ button.social{
 .card-body-main{
   width: 100%;
   height: 450px;
-  background-color: rgb(212, 241, 224);
+  background-color: white;
 }
 .card-body-main div a{
   text-decoration:none;
@@ -593,18 +593,18 @@ button.social{
 }
 .highlight-body1{
   color: blue;
-  margin-top: 15px;
-  margin-left: 10px;
+  padding:15px 15px 0 15px;
+  /* padding-bottom =0 */
 }
 .img-highlight-body1{
   width:100%;
   height: 130px;
-  padding: 10px 10px 0px 0px;
+  padding-top: 10px;
 
 }
 .highlight-list-body1 ul li{
   list-style: none;
-  margin-left: 10px;
+  padding: 0 15px 0 15px;
 }
 .highlight-list-body1 ul li div a{
   text-decoration: none;
@@ -613,7 +613,8 @@ button.social{
 /*  link -sidebar các bài viết latest*/
 .link-sidebar{
   margin-left: 10px;
-  height: 400px;
+  display: inline-block;
+  margin-top: 10px;
 }
 .link-sidebar li {
 
@@ -624,8 +625,10 @@ button.social{
   list-style: none;
   color: black;
 }
-.link-sidebar li a hr{
-
+/* khoảng cách trên dưới với hr */
+.hr-phi{
+  margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .link-sidebar li a:hover{
@@ -633,4 +636,59 @@ button.social{
 }
 .menu-tab-sidebar{
   margin-left: 10px;
+}
+.bg-body1-latest{
+  background-color: rgb(145, 188, 238);
+  list-style:none;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width:100%;
+}
+.menu-tab-sidebar #tab1 {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.menu-tab-sidebar #tab2 {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.act-tab-sidebar {
+  display: inline-block;
+  background-color: white;
+  margin-top: 5px;
+  height: 90%;
+  padding: 10px;
+
+}
+.img-cardbody2{
+  width: 100%;
+  height: 180px;
+}
+.card-body2{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  text-align: left;
+  background-color: white;
+}
+.card-body2-listnews li{
+  list-style: none;
+}
+
+.card-body2-listnews li a{
+  text-decoration: none;
+  margin-left: 10px;
+  color: black;
+}
+.card-body2-listnews li a:hover{
+  color:blue;
+}
+.hr-phi1{
+  margin-top: 10px;
+    margin-bottom: 10px;
 }
