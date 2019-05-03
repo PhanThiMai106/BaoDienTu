@@ -1,0 +1,326 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>e-News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../View/poster.css">
+
+    <script src="https://cdn.ckeditor.com/4.11.4/standard-all/ckeditor.js"></script>
+    <script src="poster.js"></script>
+</head>
+
+<body>
+  <div class="horizontalMenu">
+      <div class="topnav">
+          <a href="#contact">Log Out</a>
+          <a class="active" href="#home">Hoàng Nhi</a>
+          <a href="#about" class="avatar"><img src="avatar.png"></a>
+
+      </div>
+  </div>
+  <div class="verticalMenu">
+    <div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="http://justinfarrow.com">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            Stars Components
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Forms
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="#">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                            Pages
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Graphs and Statistics
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                           Quotes
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="#">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                            Tables
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="#">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+  </div>
+    <!-- <div class="content">
+
+        <div class="Article">
+            <div class="post">
+
+                <div class="head">
+                    <div>
+                        <div class="headLeft">
+                            <h2>Title</h2>
+                            <textarea cols="10" rows="1"></textarea>
+
+                        </div>
+                        <div class="headLeft">
+                            <h2>Summary</h2>
+                            <textarea cols="10" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="headRight">
+                        <h2>Category</h2>
+                        <div>
+                            <input type="radio" name="gender" value="male" checked> Male<br>
+                            <input type="radio" name="gender" value="female"> Female<br>
+                            <input type="radio" name="gender" value="other"> Other <br>
+                            <input type="radio" name="gender" value="other"> Other <br>
+                            <input type="radio" name="gender" value="other"> Other <br>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mutilTask">
+                    <div class="btn"><button class="btnmutilTask" onclick="showTask(1)">Content</button>
+                        <button class="btnmutilTask" onclick="showTask(2)">Photo</button>
+                        <button class="btnmutilTask" onclick="showTask(3)">SearchKey</button>
+                    </div>
+                    <div class="CKEditor">
+                        <textarea cols="50" id="editor1" name="editor1" rows="10"
+                            data-sample-short>&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;. You are using &lt;a href=&quot;https://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt;.&lt;/p&gt;</textarea>
+                        <script>
+                            CKEDITOR.replace('editor1', {
+                                // Define the toolbar groups as it is a more accessible solution.
+                                toolbarGroups: [{
+                                    "name": "basicstyles",
+                                    "groups": ["basicstyles"]
+                                },
+                                {
+                                    "name": "links",
+                                    "groups": ["links"]
+                                },
+                                {
+                                    "name": "paragraph",
+                                    "groups": ["list", "blocks"]
+                                },
+                                {
+                                    "name": "document",
+                                    "groups": ["mode"]
+                                },
+                                {
+                                    "name": "insert",
+                                    "groups": ["insert"]
+                                },
+                                {
+                                    "name": "styles",
+                                    "groups": ["styles"]
+                                },
+                                {
+                                    "name": "about",
+                                    "groups": ["about"]
+                                }
+                                ],
+                                // Remove the redundant buttons from toolbar groups defined above.
+                                removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar'
+                            });
+                        </script>
+                    </div>
+                    <div class="CKEditor" id="uploadImage">
+                        <input class="file" type="file" onchange="previewFile()">
+                        <img src="noImage.jpg" height="200" alt="">
+                    </div>
+                    <div class="CKEditor">
+                        <textarea cols="50" id="editor3" name="editor3" rows="10" data-sample-short></textarea>
+                        <script>
+                            CKEDITOR.replace('editor3', {
+                                // Define the toolbar groups as it is a more accessible solution.
+                                toolbarGroups: [{
+                                    "name": "basicstyles",
+                                    "groups": ["basicstyles"]
+                                },
+                                {
+                                    "name": "links",
+                                    "groups": ["links"]
+                                },
+                                {
+                                    "name": "paragraph",
+                                    "groups": ["list", "blocks"]
+                                },
+                                {
+                                    "name": "document",
+                                    "groups": ["mode"]
+                                },
+                                {
+                                    "name": "insert",
+                                    "groups": ["insert"]
+                                },
+                                {
+                                    "name": "styles",
+                                    "groups": ["styles"]
+                                },
+                                {
+                                    "name": "about",
+                                    "groups": ["about"]
+                                }
+                                ],
+                                // Remove the redundant buttons from toolbar groups defined above.
+                                removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar'
+                            });
+                        </script>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="finish">
+                <button class="save">Save</button>
+                <button class="submit">Submit</button>
+                <button class="preview">Preview</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+    </div> -->
+
+<div class="content">
+  <div class="main">
+    <div class="Title">
+        <h2>Title</h2>
+        <input type="text" cols="10"></input>
+    </div>
+    <div class="Summary">
+        <h3>Summary</h3>
+        <textarea cols="15" rows="5"></textarea>
+    </div>
+  </div>
+  <div class="detail">
+
+  </div>
+  <div class="main">
+    <div class="btn"><button class="btnmutilTask" onclick="showTask(1)">Content</button>
+        <button class="btnmutilTask" onclick="showTask(2)">Photo</button>
+        <button class="btnmutilTask" onclick="showTask(3)">SearchKey</button>
+    </div>
+    <div class="CKEditor">
+        <textarea cols="50" id="editor1" name="editor1" rows="10"
+            data-sample-short>&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;. You are using &lt;a href=&quot;https://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt;.&lt;/p&gt;</textarea>
+        <script>
+            CKEDITOR.replace('editor1', {
+                // Define the toolbar groups as it is a more accessible solution.
+                toolbarGroups: [{
+                    "name": "basicstyles",
+                    "groups": ["basicstyles"]
+                },
+                {
+                    "name": "links",
+                    "groups": ["links"]
+                },
+                {
+                    "name": "paragraph",
+                    "groups": ["list", "blocks"]
+                },
+                {
+                    "name": "document",
+                    "groups": ["mode"]
+                },
+                {
+                    "name": "insert",
+                    "groups": ["insert"]
+                },
+                {
+                    "name": "styles",
+                    "groups": ["styles"]
+                },
+                {
+                    "name": "about",
+                    "groups": ["about"]
+                }
+                ],
+                // Remove the redundant buttons from toolbar groups defined above.
+                removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar'
+            });
+        </script>
+    </div>
+    <div class="CKEditor" id="uploadImage">
+        <input class="file" type="file" onchange="previewFile()">
+        <img src="noImage.jpg" height="200" alt="">
+    </div>
+    <div class="CKEditor">
+
+    </div>
+  </div>
+  <div class="detail">
+
+  </div>
+</div>
+</body>
