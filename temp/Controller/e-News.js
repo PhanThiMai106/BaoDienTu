@@ -36,8 +36,10 @@ function loadDate() {
      var n = weekday[today.getDay()];
     var date =  n + ',' + today.getDate()  + ' - ' + (today.getMonth() + 1) + ' - ' + today.getFullYear();
     document.getElementById("dateTime").innerHTML = date;
+  
+  
+  
 }
-
 
 
 function ShowLoginForm(){
@@ -118,4 +120,38 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+
+window.addEventListener("resize", myFunction);
+
+function myFunction() {
+  var w = window.innerWidth;
+  var menu1 = document.getElementById("menu");
+  var menu2 = document.getElementById("vnnews-nav-mobile");
+  var rightColumn = document.getElementById("rightcolumn");
+  var leftcolumn = document.getElementById("leftcolumn");
+ 
+  if(w < 1000){
+  menu1.style.display = "none";
+   menu2.style.display = "block";
+
+  }
+
+  else{
+    menu1.style.display = "block";
+    menu2.style.display = "none";
+
+ 
+  }
+
+  if(w < 900){
+
+    rightColumn.style.display = "none";
+    leftcolumn.style.width = "100%";
+  }
+  if(w>=900){
+    rightColumn.style.display = "block";
+    leftcolumn.style.width = "60%";
+  }
 }

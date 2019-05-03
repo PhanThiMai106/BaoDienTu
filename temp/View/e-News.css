@@ -4,6 +4,11 @@
   font-family: sans-serif;
 }
 
+.content{
+  max-width: 1100px;
+  margin: auto;
+}
+
 .infor{
     background: rgb(208, 201, 205);
     display: flex;
@@ -52,8 +57,8 @@
 #main{
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
-  margin-right: 150px;
+  /* margin-left: 50px;
+  margin-right: 150px; */
 }
 
 .box{
@@ -437,8 +442,7 @@ button.social{
 }
 
 .home{
-
-  margin-left: 150px;
+  margin-left: 2.5%;
 }
 
 .myCarousel{
@@ -455,8 +459,8 @@ button.social{
 .rightcolumn {
   margin-top: 20px;
   float: left;
-  width: 25%;
-  background-color: #f1f1f1;
+  margin: auto;
+  width: 35%;
   padding-left: 20px;
   bottom: 50px;
 }
@@ -566,83 +570,53 @@ button.social{
   text-align: center;
 }
 
-/* Phi e-news-1 */
-.bg-body1{
-  background-color: rgb(145, 188, 238);
-  list-style:none;
-  padding: 8px 0 8px 15px;
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-  width:100%;
-}
-.bg-body1 li a{
-  text-decoration:none;
-  text-decoration-color: rgb(240, 247, 241);
+
+.dropbtn {
+  padding: 0px;
+  font-size: 16px;
+  border: none;
 }
 
-.row-body1 {margin: 0 0 0 100px;}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-.column-body1 {
-  float: left;
-  width: 50%;
-  padding: 0 10px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-}
-.column-body2 {
-  float: left;
-  width: 20%;
-  padding: 0 10px;
-}
- .column-body3{
-  float: left;
-  width: 30%;
-  padding: 0 10px;
-}
-.card-body1{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 5px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-.img-body1{
-  width:100%;
-  height: 250px;
-}
-.card-body-main{
-  width: 100%;
-  height: 450px;
-  background-color: rgb(212, 241, 224);
-}
-.card-body-main div a{
-  text-decoration:none;
-  color:black;
-}
-.card-body-second{
-  width: 100%;
-  height: 200px;
-  background-color: rgb(255, 255, 255);
-  padding-top: 10px;
-}
-.bg-body2{
-  list-style:none;
-  display: flex;
-   flex-direction: row;
-
-  width:100%;
-}
-.img-body-second{
-  width:95%;
-  height: 150px;
-
-}
-.card-body-second ul a{
-  text-decoration:none;
-  color:black;
-}
-.card-body-second hr {
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
-  color:black;
-  border-style: inset;
-  border-width: 1px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+#search-vnnews-nav-mobile{
+  margin-top: 7px !important;
+  margin-right: 7px !important;
+  width: 90%;
+  
+}
+
+#vnnews-nav-mobile{
+  background: #32508e;
+}
+
+#search-vnnews-nav-mobile input{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  border-radius: 2%;
 }
