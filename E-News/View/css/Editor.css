@@ -1,7 +1,5 @@
-/*verticalmenu*/
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-}
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 .fa-2x {
 font-size: 2em;
@@ -10,7 +8,7 @@ font-size: 2em;
 position: relative;
 display: table-cell;
 width: 60px;
-height: 46px;
+height: 55px;
 text-align: center;
 vertical-align: middle;
 font-size:20px;
@@ -36,6 +34,7 @@ overflow:hidden;
 transition:width .05s linear;
 -webkit-transform:translateZ(0) scale(1,1);
 z-index:1000;
+
 }
 
 .main-menu>ul {
@@ -120,7 +119,7 @@ background-color:#5fa2db;
 .area {
 float: left;
 background: #e2e2e2;
-width: 18%;
+width: 12%;
 height: 100%;
 }
 @font-face {
@@ -130,29 +129,6 @@ height: 100%;
   src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
 /*end verticalMenu*/
-
-.content{
-    display: flex;
-    flex-direction: row;
-   float: right;
-      width: 80%;
-}
-
-.Articles{
-    width: 90%;
-    float: left;
-    display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
-}
-
-
-.card{
-    width: 32%;
-    float:right;
-    margin-top: 20px;
-}
-
 
 
 /*Horizontal menu*/
@@ -168,6 +144,7 @@ body {
   overflow: hidden;
   margin-right: 10px;
   background-color: #e9e9e9;
+  height: 40px;;
 }
 
 .topnav a {
@@ -175,9 +152,9 @@ body {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 10px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .topnav a:hover {
@@ -190,7 +167,36 @@ body {
   color: white;
 }
 
-/*End Hoiental menu*/
+
+/*end horizental menu*/
+
+
+.content{
+    display: flex;
+    flex-direction: row;
+   float: right;
+      width: 80%;
+}
+
+.Articles{
+    width: 80%;
+    float: left;
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+
+.card{
+    width: 40%;
+    float:right;
+    margin-top: 20px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Lobster', cursive;
+  
+}
+
+
 
 /*Tonggle*/
 /* .btn btn-info btn-lg{
@@ -211,3 +217,308 @@ body {
   margin-top: 5%;
 }
 /*End toggle*/
+
+
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+
+
+/*category*/
+.page{
+  align-items: center;
+margin: 7%;
+}
+
+.toggle{
+  --uiToggleSize: var(--toggleSize, 20px);
+  --uiToggleIndent: var(--toggleIndent, .4em);
+  --uiToggleBorderWidth: var(--toggleBorderWidth, 2px);
+  --uiToggleColor: var(--toggleColor, #000);
+  --uiToggleDisabledColor: var(--toggleDisabledColor, #868e96);
+  --uiToggleBgColor: var(--toggleBgColor, #fff);
+  --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
+  --uiToggleArrowColor: var(--toggleArrowColor, #fff);
+
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+}
+
+.toggle__input{
+  position: absolute;
+  left: -99999px;
+}
+
+.toggle__label{
+  display: inline-flex;
+  cursor: pointer;
+  min-height: var(--uiToggleSize);
+  padding-left: calc(var(--uiToggleSize) + var(--uiToggleIndent));
+}
+
+.toggle__label:before, .toggle__label:after{
+  content: "";
+  box-sizing: border-box;  
+  width: 1em;
+  height: 1em;
+  font-size: var(--uiToggleSize);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.toggle__label:before{
+  border: var(--uiToggleBorderWidth) solid var(--uiToggleColor);
+  z-index: 2;
+}
+
+.toggle__input:disabled ~ .toggle__label:before{
+  border-color: var(--uiToggleDisabledColor);
+}
+
+.toggle__input:focus ~ .toggle__label:before{
+  box-shadow: 0 0 0 2px var(--uiToggleBgColor), 0 0 0px 4px var(--uiToggleColor);
+}
+
+.toggle__input:not(:disabled):checked:focus ~ .toggle__label:after{
+  box-shadow: 0 0 0 2px var(--uiToggleBgColor), 0 0 0px 4px var(--uiToggleColor);
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  background-color: var(--uiToggleColor);
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+  opacity: 1;
+}
+
+.toggle__text{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*
+The arrow size and position depends from sizes of square because I needed an arrow correct positioning from the top left corner of the element toggle
+*/
+
+.toggle__text:before{
+  content: "";
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  font-size: var(--uiToggleSize);
+
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-color: var(--uiToggleArrowColor);
+
+  position: absolute;
+  top: .5428em;
+  left: .2em;
+  z-index: 3;
+
+  transform-origin: left top;
+  transform: rotate(-40deg) skew(10deg);
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+  width: .5em;
+  height: .25em;
+  border-left-width: var(--uiToggleArrowWidth);
+  border-bottom-width: var(--uiToggleArrowWidth);
+  will-change: width, height;
+  transition: width .1s ease-out .2s, height .2s ease-out;
+}
+
+/*
+=====
+LEVEL 2. PRESENTATION STYLES
+=====
+*/
+
+/* 
+The demo skin
+*/
+
+.toggle__label:before, .toggle__label:after{
+  border-radius: 2px;
+}
+
+/* 
+The animation of switching states
+*/
+
+.toggle__input:not(:disabled) ~ .toggle__label:before,
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  opacity: 1;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform .2s ease-out;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:before{
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  transform: rotateY(90deg);
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:before{
+  transform: rotateY(-90deg);
+  transition-delay: 0s;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+}
+
+.toggle__text:before{
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+  opacity: 1;
+  transition: opacity .1s ease-out .3s, width .1s ease-out .5s, height .2s ease-out .3s;
+}
+
+/*
+=====
+LEVEL 3. SETTINGS
+=====
+*/
+
+.toggle{
+  --toggleColor: #690e90;
+  --toggleBgColor: #9b59b6;
+  --toggleSize: 35px;
+}
+
+
+/*end category*/
+
+
+
+/*tag*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+.detail ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+.detail ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 5px 5px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 16px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.detail ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+.detail ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #690e90;
+  color: white;
+}
+
+/* Style the header */
+.header {
+
+  background-color: #690e90;
+  padding: 5px 3px;
+  color: white;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 3px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 3px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: row;
+}
+
+.detail{
+  width: 45%;
+}
