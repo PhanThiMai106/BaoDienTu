@@ -26,7 +26,7 @@
     display: inline;
     text-decoration: none;
     margin-left: 20px;
-    width: 80px;
+   
 
 }
 
@@ -349,6 +349,7 @@ button.social{
   right: 10px;
   background: rgb(208, 233, 223);
   overflow-x: hidden;
+  
     list-style-type: none;
     display: none;
 }

@@ -71,30 +71,44 @@ function SignUp(){
 
 function home(){
   document.getElementById('category').style.display = 'none';
+  document.location='home.html';
+  return false;
 }
 function politic(){
     document.getElementById('category').style.display = 'block';
   document.getElementById('category').innerHTML= 'Viet Nam News > Politics&Laws';
+  document.location='e-News-1.html';
+  return false;
+
 }
 function economy(){
   document.getElementById('category').style.display = 'block';
 
   document.getElementById('category').innerHTML= 'Viet Nam News > Economy';
+  document.location='e-News-1.html';
+  return false;
 }
 function life(){
   document.getElementById('category').style.display = 'block';
 
   document.getElementById('category').innerHTML= 'Viet Nam News > Life&Style';
+  document.location='e-News-1.html';
+  return false;
 }
 function sport(){
   document.getElementById('category').style.display = 'block';
 
+
+  document.location='e-News-1.html';
   document.getElementById('category').innerHTML= 'Viet Nam News > Sports';
+  return false;
 }
 function environment(){
   document.getElementById('category').style.display = 'block';
 
   document.getElementById('category').innerHTML= 'Viet Nam News > Environment';
+  document.location='e-News-1.html';
+  return false;
 }
 
 
@@ -103,7 +117,7 @@ function environment(){
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    if (document.body.scrollTop >= 2000 || document.documentElement.scrollTop >= 2000) {
+    if (document.body.scrollTop >= 1000 || document.documentElement.scrollTop >= 1000) {
       document.getElementById("footer").style.display = "block";
     }else{
       document.getElementById("footer").style.display = "none";
@@ -154,4 +168,29 @@ function myFunction() {
     rightColumn.style.display = "block";
     leftcolumn.style.width = "60%";
   }
+}
+
+
+
+function xemchitiet(){
+  document.location='e-News-detail.html';
+  return true;
+}
+
+
+
+
+var arrTabs = new Array("tab1", "tab2");
+var currentTab = "tab1";
+function showTabMRight(tab) {
+    // set current tab
+    currentTab = tab;
+    // disable all tab
+    for (var i = 0; i < arrTabs.length; i++) {
+        document.getElementById(arrTabs[i]).className = "";
+        document.getElementById(arrTabs[i] + "Content").style.display = "none";
+    }
+    // show current tab
+    document.getElementById(currentTab).className = "act-tab-sidebar";
+    document.getElementById(currentTab + "Content").style.display = "block";
 }

@@ -7,126 +7,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="../css/e-News-1.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+            
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-          crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-          crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-          crossorigin="anonymous"></script>
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
 
-    <script src="C:/Users/ASUS/Documents/GitHub/BaoDienTu/Controller/e-News.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script src="D:\web\DoAn\LapTrinhWeb\BaoDienTu\E-News\Controller/e-News.js"></script>
+
+
+    
+
   </head>
   <body onload="loadDate()">
-    <!-- form  Login -->
       <div id="box">
-        <form class="box" action="index.html" method="post">
-          <h1>Login</h1>
-          <input type="text" name="" placeholder="Username">
-          <input type="password" name="" value="" placeholder="Password">
-          <input type="button" onclick="Login()" name="" value="Login">
-        </form>
+          <form class="box" action="index.html" method="post">
+              <h1>Login</h1>
+              <input type="text" name="" placeholder="Username">
+              <input type="password" name="" value="" placeholder="Password">
+              <input type="button" onclick="Login()" name="" value="Login">
+          </form>
       </div><!-- end of login box -->
 
-    <!-- form Sign in  -->
+      <!-- form Sign in  -->
       <div id="signIn">
-        <div class="left-box">
-          <h1>Sign Up</h1>
+          <div class="left-box">
+              <h1>Sign Up</h1>
 
-          <input type="text" name="username" placeholder="Username"/>
-          <input type="text" name="email" placeholder="Email"/>
-          <input type="password" name="password" placeholder="Password"/>
-          <input type="password" name="password2" placeholder="Retype password"/>
-          <input type="button" name="signup-button" onclick="SignUp()" value="Sign Up"/>
+              <input type="text" name="username" placeholder="Username" />
+              <input type="text" name="email" placeholder="Email" />
+              <input type="password" name="password" placeholder="Password" />
+              <input type="password" name="password2" placeholder="Retype password" />
+              <input type="button" name="signup-button" onclick="SignUp()" value="Sign Up" />
 
-        </div><!--  end of left box -->
-        <div class="right-box">
-          <span class="signinwith">Sign in with<br/>Social Network     </span>
+          </div><!--  end of left box -->
+          <div class="right-box">
+              <span class="signinwith">Sign in with<br />Social Network </span>
 
-        <button class="social facebook">Log in with Facebook</button>
-        <button class="social twitter">Log in with Twitter</button>
-        <button class="social google">Log in with Google+</button>
-      </div><!-- end of right box -->
-        <div class="or">OR</div>
+              <button class="social facebook">Log in with Facebook</button>
+              <button class="social twitter">Log in with Twitter</button>
+              <button class="social google">Log in with Google+</button>
+          </div><!-- end of right box -->
+          <div class="or">OR</div>
       </div><!-- end of sign in box -->
 
-    <div id="main">
-      <div class = "infor">
-          <div id="dateTime">  </div>
-          <div>
-               <ul id="contactUs">
+      <div class="infor">
+              <div id="dateTime"> </div>
+              <div>
+                  <ul id="contactUs">
 
-                <li><button type="button" name="button" >Contact Us</button></li>
-                <li><button type="button" name="button" >About Us</button></li>
+                      <li><button type="button" name="button">Contact Us</button></li>
+                      <li><button type="button" name="button">About Us</button></li>
 
-                <li><button type="button" name="button" onclick="ShowLoginForm()">Login</button></li>
-                <li><button type="button" name="button" onclick="ShowSignUpForm()">Sign Up</button></li>
-             </ul>
-          </div><!-- end of contact us  -->
+                      <li><button type="button" name="button" onclick="ShowLoginForm()">Login</button></li>
+                      <li><button type="button" name="button" onclick="ShowSignUpForm()">Sign Up</button></li>
+                  </ul>
+              </div><!-- end of contact us  -->
 
-      </div><!-- end of info -->
+          </div><!-- end of info -->
 
-      <div class= "logo">
-        <div>
-            <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News"/></a>
-        </div>
+          <div class="logo">
+              <div>
+                  <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News" /></a>
+              </div>
 
 
-      </div><!-- end of logo -->
-      <div class="menu" id="menu">
-            <ul>
-                    <li class="dropdown">
-                      <a  href="#home" onclick="home()" >HOME  <i class="fa fa-caret-down"></i></a>
-                      <div class="smenu">
-                        <a href="#">HOME1</a>
-                        <a href="#">HOME2</a>
-                      </div>
-                    </li>
+          </div><!-- end of logo -->
 
-                    <li class="dropdown">
-                      <a href="#news" onclick="politic()">POLITICS & LAWS  <i class="fa fa-caret-down"></i> </a>
-                      <div class="smenu">
-                        <a href="#">POLITICS & LAWS 1</a>
-                        <a href="#">POLITICS & LAWS 2</a>
-                      </div>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#contact" onclick="economy()">ECONOMY  <i class="fa fa-caret-down"></i></a>
-                      <div class="smenu">
-                        <a href="#">ECONOMY 1 </a>
-                        <a href="#">ECONOMY 2</a>
-                      </div>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#contact" onclick="life()">LIFE & STYLE  <i class="fa fa-caret-down"></i></a>
-                      <div class="smenu">
-                        <a href="#">LIFE & STYLE 1 </a>
-                        <a href="#">LIFE & STYLE 2 </a>
-                      </div>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#contact"onclick="sport()">SPORTS  <i class="fa fa-caret-down"></i></a>
-                      <div class="smenu">
-                        <a href="#">SPORTS1 </a>
-                        <a href="#">SPORTS2 </a>
-                      </div>
-                    </li>
 
-                    <li style="float:right ">
-                        <div class="row-search  d-flex aligns-item-center">
-                             <i class="fas fa-search btn-s" ></i>
-                             <input class="m-0 input-s" type="text" placeholder="Search.." >
-                        </div>
-                    </li>
+<nav class="navbar navbar-inverse MaiNavMenu">
+          <div class="container-fluid">
+              <div class="navbar-header">
+              <a class="navbar-brand" href="#">VietNamNews</a>
+              </div>
+              <ul class="nav navbar-nav">
+              <li ><a href="#" onclick="home()">HOME</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >POLITICS & LAWS<span class="caret"></span></a>
+                  <ul class="dropdown-menu smenu">
+                      <li><a href="#" onclick="politic()">POLITICS & LAWS 1</a></li>
+                      <li><a href="#" onclick="politic()">POLITICS & LAWS 2</a></li>
+                      <li><a href="#" onclick="politic()">POLITICS & LAWS 3</a></li>
+                  </ul>
+              </li>
+           
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >ECONOMY<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#" onclick="economy()">ECONOMY 1</a></li>
+                      <li><a href="#" onclick="economy()">ECONOMY 2</a></li>
+                      <li><a href="#" onclick="economy()">ECONOMY 3</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">LIFE & STYLE<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#"  onclick="life()">LIFE & STYLE 1</a></li>
+                      <li><a href="#"  onclick="life()">LIFE & STYLE 2</a></li>
+                      <li><a href="#"  onclick="life()">LIFE & STYLE 3</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SPORTS<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#"  onclick="sport()">SPORT 1</a></li>
+                      <li><a href="#"  onclick="sport()">SPORT 2</a></li>
+                      <li><a href="#"  onclick="sport()">SPORT 3</a></li>
+                  </ul>
+              </li>
+              </ul>
+              <form class="navbar-form navbar-left" action="/action_page.php">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="button">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+          </div>
+</nav>
 
-             </ul>
-      </div><!-- end of menu -->
+<div id="vnnews-nav-mobile" style="display: none">
+  <div class="dropdown">
+      <button class="dropbtn"><img src="../image/home.jpg" width="50px" height="50px"></button>
+      <div class="dropdown-content">
+          <a href="#">HOME</a>
+          <a href="#">POLISTICS & LAWS</a>
+          <a href="#">ECONOMY</a>
+          <a href="#">LIFE & STYLE</a>
+          <a href="#">SPORT</a>
+      </div>
+  </div>
+  <div style="float:right " id="search-vnnews-nav-mobile">
+      <div class="row-search  d-flex aligns-item-center">
+          <i class="fas fa-search btn-s"></i>
+          <input class="m-0 input-s" type="text" placeholder="Search..">
+      </div>
+  </div>
+
+</div>
+
+<div id="category" class="category">Viet Nam News ></div>
+
+
+</div>
+
 
 <br>
   <div class="row-body1">
@@ -135,7 +171,7 @@
       <div >
         <ul class= "bg-body1">
           <b></b>
-            <li><a alt ="vietnamnews" title="Viet Nam News" href="http://vietnamnews.vn/"><b>Viet Nam News &nbsp;</b></a></li>
+            <li><a alt ="vietnamnews" title="Viet Nam News" href="#"><b>Viet Nam News &nbsp;</b></a></li>
             <li>
                 <img  src="http://vietnamnews.vn//Images/arrow-breakcrump.png"
                     alt="" />
@@ -147,13 +183,16 @@
 <!-- bài chính nổi bật nhất trong chủ đề này  -->
     <div class="card-body-main">
       <div>
-        <img class="img-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/25/7289_vna_potal_pho_chu_tich_thuong_truc_quoc_hoi_tong_thi_phong_hoi_dam_voi_pho_chu_tich_quoc_hoi_lao_somphanh_phengkhammy_145529122_3840635.jpg"
-        alt="">
+        <a href="#" onclick="xemchitiet()">
+            <img class="img-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/25/7289_vna_potal_pho_chu_tich_thuong_truc_quoc_hoi_tong_thi_phong_hoi_dam_voi_pho_chu_tich_quoc_hoi_lao_somphanh_phengkhammy_145529122_3840635.jpg"
+            alt="">
+        </a>
+        
       </div>
       <br>
       <div>
         <h4>
-          <a  href="https://vietnamnews.vn/politics-laws/519171/viet-nam-laos-legislative-ties-keep-growing-na-leader.html#pFMgpPkffCubsYGv.97">
+          <a  href="#" onclick="xemchitiet()">
             Vietnam - Laos legislative ties keep growing: NA leader
           </a>
         </h4>
@@ -169,7 +208,7 @@
     <div class="card-body-second" >
           <ul class="bg-body2">
           <li>
-            <a href="/politics-laws/519246/vietnam-assumes-aaptc-2020-chairmanship-from-thailand.html">
+            <a href="#" onclick="xemchitiet()">
             <img class="img-body-second" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/27/7695_ttxvnvietnamtiepnhancuongvichutichaaptc1.jpg"
               alt="Vietnam assumes AAPTC 2020 Chairmanship from Thailand" />
             </a>
@@ -177,7 +216,7 @@
 
           <li>
             <div>
-              <a href="/politics-laws/519246/vietnam-assumes-aaptc-2020-chairmanship-from-thailand.html">
+              <a href=""onclick="xemchitiet()">
                 <b>
                   <h5>Vietnam assumes AAPTC 2020 Chairmanship from Thailand</h5>
                 </b>
@@ -196,7 +235,7 @@
     <div class="card-body-second" >
           <ul class="bg-body2">
           <li>
-            <a href="/politics-laws/519246/vietnam-assumes-aaptc-2020-chairmanship-from-thailand.html">
+            <a href="#" onclick="xemchitiet()">
             <img class="img-body-second" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/27/7695_ttxvnvietnamtiepnhancuongvichutichaaptc1.jpg"
               alt="Vietnam assumes AAPTC 2020 Chairmanship from Thailand" />
             </a>
@@ -204,7 +243,7 @@
 
           <li>
             <div>
-              <a href="/politics-laws/519246/vietnam-assumes-aaptc-2020-chairmanship-from-thailand.html">
+              <a href="#" onclick="xemchitiet()">
                 <b>
                   <h5>Vietnam assumes AAPTC 2020 Chairmanship from Thailand</h5>
                 </b>
@@ -234,10 +273,10 @@
         <!-- bài 1 trong highlight list -->
         <li>
             <div>
-              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <a href="#" onclick="xemchitiet()"  title= "Southern cakes a part of tradition">
               <b>Southern cakes a part of tradition</b>  </a>
             </div>
-            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+            <a href="#" onclick="xemchitiet()">
               <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
 
             </a>
@@ -246,10 +285,10 @@
         <!-- bài 2 trong hightlight list -->
         <li>
             <div>
-              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <a href="#" onclick="xemchitiet()"  title= "Southern cakes a part of tradition">
               <b>Southern cakes a part of tradition</b>  </a>
             </div>
-            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+            <a href="#" onclick="xemchitiet()">
               <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
 
             </a>
@@ -258,10 +297,10 @@
         <!--  bài 3 trong hightlight list-->
         <li>
             <div>
-              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <a href="#" onclick="xemchitiet()"  title= "Southern cakes a part of tradition">
               <b>Southern cakes a part of tradition</b>  </a>
             </div>
-            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+            <a href="#" onclick="xemchitiet()">
               <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
 
             </a>
@@ -270,10 +309,10 @@
         <!--  bài 4 trong hightlight list-->
         <li>
             <div>
-              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <a href="#" onclick="xemchitiet()"  title= "Southern cakes a part of tradition">
               <b>Southern cakes a part of tradition</b>  </a>
             </div>
-            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+            <a href="#" onclick="xemchitiet()">
               <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
 
             </a>
@@ -283,10 +322,10 @@
         <!--  bài 5 trong hightlight list-->
         <li>
             <div>
-              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <a href="#" onclick="xemchitiet()"  title= "Southern cakes a part of tradition">
               <b>Southern cakes a part of tradition</b>  </a>
             </div>
-            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+            <a href="#" onclick="xemchitiet()">
               <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
 
             </a>
@@ -313,32 +352,32 @@
         <div class="content-sidebar" id="tab1Content">
             <ul class="link-sidebar">
                 <!-- &raquo; là dấu >> -->
-                        <li><a href="/sunday/teed-off/519271/speedy-greens-not-for-the-nervous.html">
+                        <li><a href="#" onclick="xemchitiet()">
                             &raquo; Speedy greens not for the nervous</a>
                             <hr class="hr-phi">
                           </li>
 
-                        <li><a href="/sunday/ong-taos-kitchen/519269/beef-carpaccio-formaggi.html">
+                        <li><a href="#" onclick="xemchitiet()">
                             &raquo; Beef Carpaccio Formaggi</a>
                           <hr class="hr-phi">
                         </li>
 
-                        <li><a href="/sunday/features/519267/southern-cakes-a-part-of-tradition.html">
+                        <li><a href="#" onclick="xemchitiet()">
                             &raquo; Southern cakes a part of tradition<img src="https://vietnamnews.vn//images/multimedia.png" alt="Video" class="iconvideodisplay" /></a>
                         <hr class="hr-phi">
                           </li>
 
-                        <li><a href="/society/519254/3000-old-buildings-in-hcm-city-should-be-renovated-architectural-centre.html">
+                        <li><a href="#" onclick="xemchitiet()">
                             &raquo; 3,000 old buildings in HCM City should be renovated: architectural centre</a>
                           <hr class="hr-phi">
                         </li>
 
-                        <li><a href="/sunday/features/519266/hcm-city-theatres-stage-new-plays-for-holiday.html">
+                        <li><a href="#" onclick="xemchitiet()">
                             &raquo; HCM City theatres stage new plays for holiday</a>
                           <hr class="hr-phi">
                           </li>
 
-                        <li><a href="/sunday/inner-sanctum/519264/french-music-director-relishes-a-challenge.html">
+                        <li><a href="#" onclick="xemchitiet()">
                              &raquo; French Music Director relishes a challenge</a>
 
                           </li>
@@ -348,32 +387,32 @@
         <!-- most Read -->
         <div class="content-sidebar" id="tab2Content">
             <ul class="link-sidebar">
-              <li><a href="/politics-laws/519189/pm-phuc-meets-chinese-party-chief-and-president-xi-jinping-in-beijing.html">
+              <li><a href="#" onclick="xemchitiet()">
                           &raquo;  PM Phúc meets Chinese Party chief and President Xi Jinping in Beijing</a>
                           <hr  class="hr-phi">
                         </li>
 
-                        <li><a href="/economy/519186/noi-bai-airport-to-expand-to-handle-100-million-passengers-by-2050.html">
+                        <li><a href="#" onclick="xemchitiet()">
                           &raquo;  Nội Bài Airport to expand to handle 100 million passengers by 2050</a>
                           <hr class="hr-phi">
                         </li>
 
-                        <li><a href="/society/519236/ha-noi-faces-summer-water-shortages.html">
+                        <li><a href="#" onclick="xemchitiet()">
                           &raquo;  Hà Nội faces summer water shortages</a>
                           <hr class="hr-phi">
                         </li>
 
-                        <li><a href="/economy/519175/fdi-reaches-record-level-in-four-months.html">
+                        <li><a href="#" onclick="xemchitiet()">
                           &raquo;  FDI reaches record level in four months</a>
                           <hr class="hr-phi">
                         </li>
 
-                        <li><a href="/society/519188/hcm-city-to-ban-vehicles-in-centre-on-holidays.html">
+                        <li><a href="#" onclick="xemchitiet()">
                           &raquo;  HCM City to ban vehicles in centre on holidays</a>
                           <hr class="hr-phi">
                         </li>
 
-                        <li><a href="/economy/519181/cptpp-smooths-path-to-canadian-market-for-vietnamese-goods.html">
+                        <li><a href="#" onclick="xemchitiet()">
                           &raquo;  CPTPP smooths path to Canadian market for Vietnamese goods</a>
 
                         </li>
@@ -381,23 +420,6 @@
       </div>
 
 
-
-        <script type="text/javascript">
-            var arrTabs = new Array("tab1", "tab2");
-            var currentTab = "tab1";
-            function showTabMRight(tab) {
-                // set current tab
-                currentTab = tab;
-                // disable all tab
-                for (var i = 0; i < arrTabs.length; i++) {
-                    document.getElementById(arrTabs[i]).className = "";
-                    document.getElementById(arrTabs[i] + "Content").style.display = "none";
-                }
-                // show current tab
-                document.getElementById(currentTab).className = "act-tab-sidebar";
-                document.getElementById(currentTab + "Content").style.display = "block";
-            }
-        </script>
 
     </div>
 
@@ -410,13 +432,13 @@
       </div>
       <br>
       <ul class="card-body2-listnews">
-                    <li ><a href="/politics-laws/278928/vision-needed-for-east-sea-stability.html"> &#8226; &nbsp; Vision needed for East Sea stability</a>
+                    <li ><a href="#" onclick="xemchitiet()"> &#8226; &nbsp; Vision needed for East Sea stability</a>
                       <hr class="hr-phi1">
                     </li>
-                    <li><a href="/politics-laws/273772/asean-china-talk-on-east-sea.html">&#8226; &nbsp; ASEAN, China talk on East Sea</a>
+                    <li><a href="#" onclick="xemchitiet()">&#8226; &nbsp; ASEAN, China talk on East Sea</a>
                     <hr class="hr-phi1">
                     </li>
-                    <li><a href="/politics-laws/268881/asean-summit-to-debate-on-east-sea.html">&#8226; &nbsp; ASEAN Summit to debate on East Sea</a>
+                    <li><a href="#" onclick="xemchitiet()">&#8226; &nbsp; ASEAN Summit to debate on East Sea</a>
 
                     </li>
                 </ul>
