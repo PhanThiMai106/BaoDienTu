@@ -178,6 +178,22 @@ function xemchitiet(){
 }
 
 
+function user(){
+  document.location='e-News-admin_user.html';
+  return true;
+}
+
+
+function category(){
+  document.location='e-News-admin_category.html';
+  return true;
+}
+
+
+function artical(){
+  document.location='e-News-admin_articals.html';
+  return true;
+}
 
 
 var arrTabs = new Array("tab1", "tab2");

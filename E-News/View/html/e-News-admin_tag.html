@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="../css/e-News-admin_tag.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="e-News.js"></script>
+
 </head>
 
 <body class ="body-main">
@@ -15,6 +18,7 @@
       <li class="adphi"> Admin &nbsp;Phi Tạ | <a href="../e-News-admin.html">E-NEWS</a><span class="glyphicon glyphicon-chevron-right"></span><a href="#">TAGS MANAGEMENT</a>
 
         </li>
+
 
 <li><button class="icon-header1"><span class="glyphicon glyphicon-envelope"></span>&nbsp;<span class="caret"></span></button></li>
 <li><button class="icon-header1"><span class="glyphicon glyphicon-th-list"></span>&nbsp;<span class="caret"></span></button></li>
@@ -26,20 +30,25 @@
   <div class="prow">
     <ul>
       <li class="card-col1">
-        <!-- <div class="profile-admin">
-            <img src="" alt="">
-          </div> -->
+       
+      
+            <div class="list-menu" >
+        
+                <button class="list-btn" type="submit" onclick="home()" name="button" ><a href="home.html" class="glyphicon glyphicon-home
+                  "></a>&nbsp;&nbsp;&nbsp;&nbsp;Home</button>
+         
+          </div>
+        
+      
+           
+        
         <div class="list-menu">
-          <button class="list-btn" type="button" name="button"><a class="glyphicon glyphicon-home
-"></a>&nbsp;&nbsp;&nbsp;&nbsp;Home</button>
-        </div>
-        <div class="list-menu">
-          <button class="list-btn" type="button" name="button"><a class="glyphicon glyphicon-dashboard
+          <button class="list-btn" type="button" name="button" onclick="home()"><a href="home.html" class="glyphicon glyphicon-dashboard
 "></a>&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</button>
         </div>
 
         <div class="list-menu">
-          <button class="list-btn type=" name="button"><a class="glyphicon glyphicon-list-alt"></a>&nbsp;&nbsp;&nbsp;&nbsp; Category Management</button>
+          <button class="list-btn type=" name="button" onclick="category()"><a href="e-News-admin_category.html" class="glyphicon glyphicon-list-alt" ></a>&nbsp;&nbsp;&nbsp;&nbsp; Category Management</button>
         </div>
         <div class="list-menu">
           <button class="list-btn" type="button" name="button">
@@ -48,11 +57,12 @@
           </button>
         </div>
         <div class="list-menu">
-          <button class="list-btn" type="button" name="button"><a class="glyphicon glyphicon-check
+          <button class="list-btn" type="button" name="button" onclick="artical()">
+            <a href="e-News-admin_articals.html" class="glyphicon glyphicon-check
 "></a>&nbsp;&nbsp;&nbsp;&nbsp;Articles Management</button>
         </div>
         <div class="list-menu">
-          <button class="list-btn" type="button" name="button"><a class="glyphicon glyphicon-user"></a>&nbsp;&nbsp;&nbsp;&nbsp;User Management
+          <button class="list-btn" type="button" name="button" onclick="user()"><a href="e-News-admin_user.html" class="glyphicon glyphicon-user"></a>&nbsp;&nbsp;&nbsp;&nbsp;User Management
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="glyphicon glyphicon-menu-down"></span>
           </button>
