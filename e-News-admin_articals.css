@@ -1,0 +1,146 @@
+body{
+  width: 100%;
+  margin: 0px;
+  height: 100%;
+}
+.pheader-1{
+  color: white;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: inline-block;
+
+}
+.adphi{
+  padding: 15px;
+}
+
+.pheader-1 ul li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 880px;
+  padding: 15px;
+}
+.pheader-1 ul li{
+  list-style: none;
+  float:left;
+}
+
+.icon-header1{
+  height: 50px;
+  width:50px;
+  background-color: black;
+  border: none;
+  margin-right: 0px;
+}
+.icon-header1:hover{
+  background-color: rgb(250, 161, 194);
+  /* border: 1px solid white; */
+}
+
+/* hết header 1 */
+.prow{
+  width=100%;
+  margin-left: -40px;
+  margin-top: -20px;
+}
+.prow ul li{
+  float:left;
+  list-style: none;
+}
+.card-col1{
+  width: 20%;
+  /* display: inline-block ; */
+  background-color: rgb(10, 39, 57);
+  height: 100%;
+}
+.card-col2{
+  width: 80%;
+  background-color: white;
+}
+
+/* list menu chức năng của admin */
+.list-menu{
+  width:100%;
+  height: 50px;
+}
+.list-btn{
+  text-align: left;
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(10, 39, 57);
+  color: white;
+  border: 0.5px solid black;
+}
+.list-btn:hover{
+  background-color: rgb(80, 144, 125);
+}
+
+/* bar2 search */
+.bar2-search{
+  width: 100%;
+  height: 50px;
+  background-color: rgb(214, 202, 217);
+padding: 15px;
+}
+.bar2-search ul li{
+  float: left;
+  margin-right: 5px;
+}
+.input-search{
+  width: 400px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.btn-search{
+  border-radius: 5px;
+  border: none;
+  height: 25px;
+}
+
+/* bar 3 */
+.bar3-search{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+padding: 15px;
+}
+
+.main-part table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.main-part table td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.th-col0{
+  width: 2;
+}
+.th-col1{
+  width:
+}
+.tbl-articles tr td ul li{
+  margin-right: 10px;
+align-items: left;
+}
+.btn-add{
+  border-radius: 35px;
+  border:none;
+  padding: 5px;
+  margin-top:-5px;
+  margin-left: 80%
+}
