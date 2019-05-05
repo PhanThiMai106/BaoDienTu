@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>e-News-Category</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/e-News-1.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+
+    <script src="C:/Users/ASUS/Documents/GitHub/BaoDienTu/Controller/e-News.js"></script>
+  </head>
+  <body onload="loadDate()">
+    <!-- form  Login -->
+      <div id="box">
+        <form class="box" action="index.html" method="post">
+          <h1>Login</h1>
+          <input type="text" name="" placeholder="Username">
+          <input type="password" name="" value="" placeholder="Password">
+          <input type="button" onclick="Login()" name="" value="Login">
+        </form>
+      </div><!-- end of login box -->
+
+    <!-- form Sign in  -->
+      <div id="signIn">
+        <div class="left-box">
+          <h1>Sign Up</h1>
+
+          <input type="text" name="username" placeholder="Username"/>
+          <input type="text" name="email" placeholder="Email"/>
+          <input type="password" name="password" placeholder="Password"/>
+          <input type="password" name="password2" placeholder="Retype password"/>
+          <input type="button" name="signup-button" onclick="SignUp()" value="Sign Up"/>
+
+        </div><!--  end of left box -->
+        <div class="right-box">
+          <span class="signinwith">Sign in with<br/>Social Network     </span>
+
+        <button class="social facebook">Log in with Facebook</button>
+        <button class="social twitter">Log in with Twitter</button>
+        <button class="social google">Log in with Google+</button>
+      </div><!-- end of right box -->
+        <div class="or">OR</div>
+      </div><!-- end of sign in box -->
+
+    <div id="main">
+      <div class = "infor">
+          <div id="dateTime">  </div>
+          <div>
+               <ul id="contactUs">
+
+                <li><button type="button" name="button" >Contact Us</button></li>
+                <li><button type="button" name="button" >About Us</button></li>
+
+                <li><button type="button" name="button" onclick="ShowLoginForm()">Login</button></li>
+                <li><button type="button" name="button" onclick="ShowSignUpForm()">Sign Up</button></li>
+             </ul>
+          </div><!-- end of contact us  -->
+
+      </div><!-- end of info -->
+
+      <div class= "logo">
+        <div>
+            <a><img src="https://vietnamnews.vn//Images/logo.png" alt="e-News"/></a>
+        </div>
+
+
+      </div><!-- end of logo -->
+      <div class="menu" id="menu">
+            <ul>
+                    <li class="dropdown">
+                      <a  href="#home" onclick="home()" >HOME  <i class="fa fa-caret-down"></i></a>
+                      <div class="smenu">
+                        <a href="#">HOME1</a>
+                        <a href="#">HOME2</a>
+                      </div>
+                    </li>
+
+                    <li class="dropdown">
+                      <a href="#news" onclick="politic()">POLITICS & LAWS  <i class="fa fa-caret-down"></i> </a>
+                      <div class="smenu">
+                        <a href="#">POLITICS & LAWS 1</a>
+                        <a href="#">POLITICS & LAWS 2</a>
+                      </div>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#contact" onclick="economy()">ECONOMY  <i class="fa fa-caret-down"></i></a>
+                      <div class="smenu">
+                        <a href="#">ECONOMY 1 </a>
+                        <a href="#">ECONOMY 2</a>
+                      </div>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#contact" onclick="life()">LIFE & STYLE  <i class="fa fa-caret-down"></i></a>
+                      <div class="smenu">
+                        <a href="#">LIFE & STYLE 1 </a>
+                        <a href="#">LIFE & STYLE 2 </a>
+                      </div>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#contact"onclick="sport()">SPORTS  <i class="fa fa-caret-down"></i></a>
+                      <div class="smenu">
+                        <a href="#">SPORTS1 </a>
+                        <a href="#">SPORTS2 </a>
+                      </div>
+                    </li>
+
+                    <li style="float:right ">
+                        <div class="row-search  d-flex aligns-item-center">
+                             <i class="fas fa-search btn-s" ></i>
+                             <input class="m-0 input-s" type="text" placeholder="Search.." >
+                        </div>
+                    </li>
+
+             </ul>
+      </div><!-- end of menu -->
+
+<br>
+  <div class="row-body1">
+  <div class="column-body1">
+    <div class="card-body1">
+      <div >
+        <ul class= "bg-body1">
+          <b></b>
+            <li><a alt ="vietnamnews" title="Viet Nam News" href="http://vietnamnews.vn/"><b>Viet Nam News &nbsp;</b></a></li>
+            <li>
+                <img  src="http://vietnamnews.vn//Images/arrow-breakcrump.png"
+                    alt="" />
+                  </li>
+            <li><a class="cate-act" href="/politics-laws"> <b>&nbsp; Politics & Laws</b></a></li>
+        </ul>
+    </div>
+    </div>
+<!-- bài chính nổi bật nhất trong chủ đề này  -->
+    <div class="card-body-main">
+      <div>
+        <img class="img-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/25/7289_vna_potal_pho_chu_tich_thuong_truc_quoc_hoi_tong_thi_phong_hoi_dam_voi_pho_chu_tich_quoc_hoi_lao_somphanh_phengkhammy_145529122_3840635.jpg"
+        alt="">
+      </div>
+      <br>
+      <div>
+        <h4>
+          <a  href="https://vietnamnews.vn/politics-laws/519171/viet-nam-laos-legislative-ties-keep-growing-na-leader.html#pFMgpPkffCubsYGv.97">
+            Vietnam - Laos legislative ties keep growing: NA leader
+          </a>
+        </h4>
+      </div>
+
+      <div >
+        <p>The comprehensive co-operation between the national assemblies of Việt Nam and Laos has developed fruitfully, said Vice Chairwoman of the Vietnamese National Assembly (NA) Tòng Thị Phóng
+        </p>
+      </div>
+    </div>
+    <!-- card các bài viết phụ  -->
+    <!-- bài 1 trong list news phụ -->
+    <div class="card-body-second" >
+          <ul class="bg-body2">
+          <li>
+            <a href="/politics-laws/519246/vietnam-assumes-aaptc-2020-chairmanship-from-thailand.html">
+            <img class="img-body-second" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/27/7695_ttxvnvietnamtiepnhancuongvichutichaaptc1.jpg"
+              alt="Vietnam assumes AAPTC 2020 Chairmanship from Thailand" />
+            </a>
+          </li>
+
+          <li>
+            <div>
+              <a href="/politics-laws/519246/vietnam-assumes-aaptc-2020-chairmanship-from-thailand.html">
+                <b>
+                  <h5>Vietnam assumes AAPTC 2020 Chairmanship from Thailand</h5>
+                </b>
+
+                <div >
+                Việt Nam assumed the role of the Chair of the Association of Asia-Pacific Peace Operations Training Centres (AAPTC) in 2020 from Thailand during its annual general meeting and workshop in Bangkok on Friday.
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <hr>
+    </div>
+    <br>
+    <!-- bài 2 trong list news phụ -->
+    <div class="card-body-second" >
+          <ul class="bg-body2">
+          <li>
+            <a href="/politics-laws/519246/vietnam-assumes-aaptc-2020-chairmanship-from-thailand.html">
+            <img class="img-body-second" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/27/7695_ttxvnvietnamtiepnhancuongvichutichaaptc1.jpg"
+              alt="Vietnam assumes AAPTC 2020 Chairmanship from Thailand" />
+            </a>
+          </li>
+
+          <li>
+            <div>
+              <a href="/politics-laws/519246/vietnam-assumes-aaptc-2020-chairmanship-from-thailand.html">
+                <b>
+                  <h5>Vietnam assumes AAPTC 2020 Chairmanship from Thailand</h5>
+                </b>
+
+                <div >
+                Việt Nam assumed the role of the Chair of the Association of Asia-Pacific Peace Operations Training Centres (AAPTC) in 2020 from Thailand during its annual general meeting and workshop in Bangkok on Friday.
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <hr>
+    </div>
+
+  </div>
+
+<!-- cột hightlight -->
+  <div class="column-body2">
+    <div class="card-body1">
+      <!-- tiêu đề hightlight  -->
+      <div class="highlight-body1">
+        <b>HIGHTLIGHT</b>
+        <hr>
+      </div>
+    <div class="highlight-list-body1">
+      <ul>
+        <!-- bài 1 trong highlight list -->
+        <li>
+            <div>
+              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <b>Southern cakes a part of tradition</b>  </a>
+            </div>
+            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+              <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
+
+            </a>
+          <hr>
+        </li>
+        <!-- bài 2 trong hightlight list -->
+        <li>
+            <div>
+              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <b>Southern cakes a part of tradition</b>  </a>
+            </div>
+            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+              <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
+
+            </a>
+          <hr>
+        </li>
+        <!--  bài 3 trong hightlight list-->
+        <li>
+            <div>
+              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <b>Southern cakes a part of tradition</b>  </a>
+            </div>
+            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+              <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
+
+            </a>
+          <hr>
+        </li>
+        <!--  bài 4 trong hightlight list-->
+        <li>
+            <div>
+              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <b>Southern cakes a part of tradition</b>  </a>
+            </div>
+            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+              <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
+
+            </a>
+          <hr>
+        </li>
+
+        <!--  bài 5 trong hightlight list-->
+        <li>
+            <div>
+              <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97"  title= "Southern cakes a part of tradition">
+              <b>Southern cakes a part of tradition</b>  </a>
+            </div>
+            <a href="https://vietnamnews.vn/sunday/features/519267/southern-cakes-a-part-of-tradition.html#T3uzFZYy0zkxW8Sg.97">
+              <img class ="img-highlight-body1" src="http://image.vietnamnews.vn/uploadvnnews/Article/2019/4/28/5911_1.JPG" title="Southern cakes a part of tradition">
+
+            </a>
+          <hr>
+        </li>
+        <!-- Kết thúc list bài trong hightlight -->
+      </ul>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- Cột thứ 3 trong trang -->
+  <div class="column-body3">
+    <div class="card-body2">
+      <!-- tab 1 latest -->
+      <div class= "bg-body1-latest">
+        <div class="menu-tab-sidebar">
+              <a id="tab1" class="act-tab-sidebar" href="javascript:;" onclick="showTabMRight('tab1');"> <b>LATEST</b> </a>
+              <a id="tab2" href="javascript:;" onclick="showTabMRight('tab2');"> <b>MOST READ</b> </a>
+          </div>
+      </div>
+
+        <div class="content-sidebar" id="tab1Content">
+            <ul class="link-sidebar">
+                <!-- &raquo; là dấu >> -->
+                        <li><a href="/sunday/teed-off/519271/speedy-greens-not-for-the-nervous.html">
+                            &raquo; Speedy greens not for the nervous</a>
+                            <hr class="hr-phi">
+                          </li>
+
+                        <li><a href="/sunday/ong-taos-kitchen/519269/beef-carpaccio-formaggi.html">
+                            &raquo; Beef Carpaccio Formaggi</a>
+                          <hr class="hr-phi">
+                        </li>
+
+                        <li><a href="/sunday/features/519267/southern-cakes-a-part-of-tradition.html">
+                            &raquo; Southern cakes a part of tradition<img src="https://vietnamnews.vn//images/multimedia.png" alt="Video" class="iconvideodisplay" /></a>
+                        <hr class="hr-phi">
+                          </li>
+
+                        <li><a href="/society/519254/3000-old-buildings-in-hcm-city-should-be-renovated-architectural-centre.html">
+                            &raquo; 3,000 old buildings in HCM City should be renovated: architectural centre</a>
+                          <hr class="hr-phi">
+                        </li>
+
+                        <li><a href="/sunday/features/519266/hcm-city-theatres-stage-new-plays-for-holiday.html">
+                            &raquo; HCM City theatres stage new plays for holiday</a>
+                          <hr class="hr-phi">
+                          </li>
+
+                        <li><a href="/sunday/inner-sanctum/519264/french-music-director-relishes-a-challenge.html">
+                             &raquo; French Music Director relishes a challenge</a>
+
+                          </li>
+
+            </ul>
+        </div>
+        <!-- most Read -->
+        <div class="content-sidebar" id="tab2Content">
+            <ul class="link-sidebar">
+              <li><a href="/politics-laws/519189/pm-phuc-meets-chinese-party-chief-and-president-xi-jinping-in-beijing.html">
+                          &raquo;  PM Phúc meets Chinese Party chief and President Xi Jinping in Beijing</a>
+                          <hr  class="hr-phi">
+                        </li>
+
+                        <li><a href="/economy/519186/noi-bai-airport-to-expand-to-handle-100-million-passengers-by-2050.html">
+                          &raquo;  Nội Bài Airport to expand to handle 100 million passengers by 2050</a>
+                          <hr class="hr-phi">
+                        </li>
+
+                        <li><a href="/society/519236/ha-noi-faces-summer-water-shortages.html">
+                          &raquo;  Hà Nội faces summer water shortages</a>
+                          <hr class="hr-phi">
+                        </li>
+
+                        <li><a href="/economy/519175/fdi-reaches-record-level-in-four-months.html">
+                          &raquo;  FDI reaches record level in four months</a>
+                          <hr class="hr-phi">
+                        </li>
+
+                        <li><a href="/society/519188/hcm-city-to-ban-vehicles-in-centre-on-holidays.html">
+                          &raquo;  HCM City to ban vehicles in centre on holidays</a>
+                          <hr class="hr-phi">
+                        </li>
+
+                        <li><a href="/economy/519181/cptpp-smooths-path-to-canadian-market-for-vietnamese-goods.html">
+                          &raquo;  CPTPP smooths path to Canadian market for Vietnamese goods</a>
+
+                        </li>
+                          </ul>
+      </div>
+
+
+
+        <script type="text/javascript">
+            var arrTabs = new Array("tab1", "tab2");
+            var currentTab = "tab1";
+            function showTabMRight(tab) {
+                // set current tab
+                currentTab = tab;
+                // disable all tab
+                for (var i = 0; i < arrTabs.length; i++) {
+                    document.getElementById(arrTabs[i]).className = "";
+                    document.getElementById(arrTabs[i] + "Content").style.display = "none";
+                }
+                // show current tab
+                document.getElementById(currentTab).className = "act-tab-sidebar";
+                document.getElementById(currentTab + "Content").style.display = "block";
+            }
+        </script>
+
+    </div>
+
+    <br>
+    <!-- card body 2 -->
+
+    <div class="card-body1">
+      <div>
+        <img class="img-cardbody2 " src="http://image.vietnamnews.vn/uploadvnnews/Adv/2016/2/25/binh_rjvb.jpg" alt="">
+      </div>
+      <br>
+      <ul class="card-body2-listnews">
+                    <li ><a href="/politics-laws/278928/vision-needed-for-east-sea-stability.html"> &#8226; &nbsp; Vision needed for East Sea stability</a>
+                      <hr class="hr-phi1">
+                    </li>
+                    <li><a href="/politics-laws/273772/asean-china-talk-on-east-sea.html">&#8226; &nbsp; ASEAN, China talk on East Sea</a>
+                    <hr class="hr-phi1">
+                    </li>
+                    <li><a href="/politics-laws/268881/asean-summit-to-debate-on-east-sea.html">&#8226; &nbsp; ASEAN Summit to debate on East Sea</a>
+
+                    </li>
+                </ul>
+    </div>
+
+  </div>
+
+</div>
+
+      <br>
+
+
+<!--  -->
+
+
+
+  </body>
+</html>
