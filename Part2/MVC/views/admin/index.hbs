@@ -1,0 +1,117 @@
+<div class="card-body">
+  {{!-- start header editor --}}
+    <div>
+        <h4 class="card-header">Editor</h4>
+    </div>
+    {{!-- end header editor --}}
+    <div>
+        <table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Article</th>
+      <th scope="col">Writer</th>
+      <th scope="col">Posted Day</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{!-- ex cho 1 row --}}
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="#" class="stretched-link text-danger" style="position: relative;">Mark enews babab</a>
+</td>
+      <td>Tú Phi</td>
+      <td>16/06/2019</td>
+      <td class="input-group" style="width:120px;">
+         
+  <select class="custom-select" id="inputGroupSelect04" onchange="myChoice()">
+    <option selected>Choose...</option>
+    <option>Duyệt</option>
+    <option>Từ chối</option>   
+  </select>
+ 
+      </td>
+      <dialog id="myDialog">
+        <textarea class="form-control" rows="5" id="id_reason" style="width:300px" placeholder="Give Your Reason"></textarea>
+        <center><div ><button type="button" class="btn btn-success" onclick="closeDialog()" style="margin-top:15px">
+        OK
+        </button></div></center>
+        
+        
+        </dialog>
+{{!-- dialog chap nhan bai viet --}}
+         <dialog id="myDialogApprove" style="width:500px" >
+           {{!-- edit category --}}
+        <div >
+        <label for="txtcategory">Category</label>
+          <select class="browser-default custom-select custom-select-lg mb-3" id="cate_parent">
+            <option> Cat 1</option>
+            <option> Cat 2</option>
+            <option> Cat 3</option>
+          </select>   
+      </div>
+{{!-- edit tags --}}
+      <div >
+        <label for="txttitle">Tags</label>
+      <div class="input-group mb-3">
+  <select class="custom-select" id="inputGroupSelect02">
+    <option selected>Choose to edit</option>
+    <option value="1">Tag 1</option>
+    <option value="2">Tag 2</option>
+    <option value="3">Tag 3</option>
+  </select>
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Edit</button>
+  </div>
+</div>
+</div>
+{{!-- time to post --}}
+<div>
+<label for="txttitle">Public Date</label>
+<form >
+  <input type="date">
+</form>
+</div>
+<center><div ><button type="button" class="btn btn-success" onclick="closeDialog()" style="margin-top:15px">
+        OK
+        </button></div></center>
+        </dialog>
+
+    </tr>
+    
+    {{!-- start script  --}}
+  <script>
+      function myChoice() {
+        var y = document.getElementById("myDialog"); 
+        var z=document.getElementById("myDialogApprove");
+        var x=document.getElementById("inputGroupSelect04").selectedIndex;
+        if(x==1)
+        {
+          z.show();
+        }
+        else if(x==2)
+        {
+          y.show();
+        }
+      }
+      function closeDialog() {
+        var x=document.getElementById("inputGroupSelect04").selectedIndex;
+        var y = document.getElementById("myDialog"); 
+        var z=document.getElementById("myDialogApprove");
+
+       if(x==1)
+        {
+          z.close();
+        }
+        else if(x==2)
+        {
+          y.close();
+        }
+      }
+    </script>
+      {{!-- end script --}}
+  </tbody>
+</table>
+    </div>
+</div>
