@@ -1,0 +1,25 @@
+<div class="card shadow mt-3">
+    <h5 class="card-header">Edit Hash Tag</h5>
+    <div class="card-body">
+        {{#if this.error}}
+        <div class="alert alert-danger" role="alert">
+            inValid Hash Tag.<a href="/admin/hashtag" class="alert-link">Go Back</a>
+        </div>
+        {{else}}
+        <form method="POST" action="/admin/hashtag/update">
+            <div class="form-group">
+                <h5>Hash Tag ID</h5>
+                <input type="text" class="form-control" name="HashID" value="{{this.HashTag.HashID}}">
+                <h5 class="mt-4">Tag</h5>
+                <input name="Tag" type="text" class="form-control" value="{{this.HashTag.Tag}}">
+            </div>
+            <a class="btn btn-primary mt-4" href="/admin/hashtag" role="button">
+                <i class="fa fa-backward" aria-hidden="true"></i>List</a>
+            <button type="submit" class="btn btn-danger mt-4" formaction="/admin/hashtag/delete">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
+            <button type="submit" class="btn btn-success mt-4">
+                <i class="fa fa-check" aria-hidden="true"></i>save</button>
+        </form>
+        {{/if}}
+    </div>
+</div>
