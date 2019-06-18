@@ -1,0 +1,237 @@
+{{#section 'js'}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+
+
+
+
+    var list = document.getElementById("myUL");
+    var myNodelist = list.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+    }
+
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
+
+    function newElement() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myInput").value;
+
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+            alert("You must write something!");
+        } else {
+            document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
+
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none";
+
+            }
+        }
+    }
+
+
+
+</script>
+{{/section}}
+
+{{#section 'css'}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    ul li:nth-child(odd) {
+        background: #f9f9f9;
+    }
+
+    ul li:hover {
+        background: #ddd;
+    }
+
+    ul li.checked {
+        background: #888;
+        color: #fff;
+        text-decoration: line-through;
+    }
+
+    .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+    }
+
+    .close:hover {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .header {
+        background-color: #f44336;
+        padding: 30px 40px;
+        color: white;
+        text-align: center;
+    }
+
+    .header:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    input {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        width: 75%;
+        padding: 10px;
+        float: left;
+        font-size: 16px;
+    }
+
+    .addBtn {
+        padding: 10px;
+        width: 25%;
+        background: #d9d9d9;
+        color: #555;
+        float: left;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 0;
+    }
+
+    .addBtn:hover {
+        background-color: #bbb;
+    }
+</style>
+{{/section}}
+
+<div class="container">
+    <div class="row">
+        <!-- Team member -->
+        {{#each this.articles}}
+        <div class="col-sm-6 col-md-4 col-lg-4 mt-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="/imgs/articles/{{Photo}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ArTitle}}</h5>
+                    <p class="card-text">{{Summary}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{FullName}}</li>
+                    <li class="list-group-item">{{PostedDay}}</li>
+                    <li class="list-group-item"><a href="/demo/{{ArID}}/preview" target="_blank">learn more</a></li>
+                </ul>
+                <div class="card-body">
+                    <button id="Approve" class="btn btn-success" data-toggle="modal"
+                        data-target="#myModal">Approve</button>
+                    <button id="Deny" class="btn btn-danger" data-toggle="modal" data-target="#Mydeny">Deny</button>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="Mydeny" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Deny <p>Give some reasons</p>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                    <textarea cols="10" rows="10"></textarea>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Approval</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="detail">
+                        <div class="row">
+                            <div class="col">
+                                <h3 for="txtcategory">Category</h3>
+                                <select class="browser-default custom-select custom-select-lg mb-3" id="cate_parent"
+                                    name="category">
+                                    {{#each allLcCategories}}
+                                    <option value="{{CaID}}">{{CaName}}</option>
+                                    {{/each}}
+                                </select>
+                                <div class="date">
+                                    <label for="txtDOB"><strong>Posting date</strong> </label>
+                                    <input type="text" class="form-control" id="txtDOB" name="DayOfBirth">
+                                    </input>
+
+                                </div>
+                            </div>
+                            <div class="col">
+
+                                <div class="card ">
+
+                                    <div id="myDIV" class="header">
+                                        <h3 style="margin:5px">Hash Tag</h3>
+                                        <input type="text" id="myInput" placeholder="Enter hash tag...">
+                                        <span onclick="newElement()" class="addBtn">Add</span>
+                                    </div>
+                                    <ul id="myUL">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

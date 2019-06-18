@@ -1,0 +1,262 @@
+{{#section 'css'}}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/css/fileinput.min.css" media="all"
+  rel="stylesheet" type="text/css" />
+
+<style>
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+ 
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+
+  ul li:hover {
+    background: #ddd;
+  }
+
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+</style>
+{{/section}}
+
+{{#section 'js'}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/js/fileinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/themes/fa/theme.min.js"></script>
+<script
+  src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=ezd73nxbzc7bu6e86g2l82jbbffke0mwevwrnyvc5q8h89j6"></script>
+
+
+
+<script>
+
+  $(function () {
+    tinymce.init({
+      selector: '#txtFullDes',
+      height: 500,
+      menubar: false,
+      plugins: 'paste image link autolink lists table media',
+      toolbar: [
+        'undo redo | bold italic underline strikethrough | numlist bullist | alignleft aligncenter alignright',
+        'forecolor backcolor',
+        'table link image media',
+      ],
+    });
+  })
+
+  $(function () {
+    $('#fuMain').fileinput({
+      theme: 'fa',
+      dropZoneEnabled: false,
+      allowedFileExtensions: ['png', 'jpg', 'gif'],
+      uploadUrl: '/upload',
+      uploadAsync: false,
+    });
+  })
+
+
+  var tags = [];
+
+
+
+  $("#submit").click(function () {
+    alert(tags);
+    $.post('/demo/tags', {
+      "tags": tags,
+    },
+      (data, status) => {
+        
+        status
+      })
+  });
+
+
+  var list = document.getElementById("myUL");
+  var myNodelist = list.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
+
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li);
+      tags.push(inputValue);
+    }
+    document.getElementById("myInput").value = "";
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function () {
+        var div = this.parentElement;
+        div.style.display = "none";
+
+      }
+    }
+  }
+
+</script>
+{{/section}}
+
+<form method="POST" class="shadow mt-5">
+  <div class="row ">
+    <div class="col ">
+      <div>
+        <div class="form-group">
+          <h3 for="txtTitle">Title</h3>
+          <input type="text" class="form-control" id="txtTitle" name="Title">
+        </div>
+        <div class="form-group">
+          <h3 for="txtSummary">Summary</h3>
+          <input type="text" class="form-control" id="txtSummary" name="Summary">
+        </div>
+        <div class="form-group">
+          <h3 for="txtcategory">Category</h3>
+          <select class="browser-default custom-select custom-select-lg mb-3" id="cate_parent" name="category">
+            {{#each allLcCategories}}
+            <option value="{{CaID}}">{{CaName}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+      <div class="card mt-5">
+        <h4 class="card-header">
+          Content
+        </h4>
+        <div class="card-body">
+          <div>
+            <div class="form-group">
+              <label for="txtFullDes">Description</label>
+              <textarea class="form-control" id="txtFullDes" name="FullDes"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col ">
+
+      <div class="card ">
+
+        <div id="myDIV" class="header">
+          <h3 style="margin:5px">Hash Tag</h3>
+          <input type="text" id="myInput" placeholder="Enter hash tag...">
+          <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        <ul id="myUL">
+        </ul>
+      </div>
+
+      <div class="card mt-4 ">
+        <h4 class="card-header mt-3">
+          Upload Image
+        </h4>
+        <div class="card-body">
+          <div>
+            <div class="form-group">
+              {{!-- <label for="fuMain">Photo</label> --}}
+              <div class="file-loading">
+                <input name="fuMain" id="fuMain" type="file" single>
+                <label id="filename"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <a class="btn btn-primary" href="/demo/" role="button">
+    <i class="fa fa-backward" aria-hidden="true"></i>
+    List
+  </a>
+  <button type="submit" href="/admin/preview" class="btn btn-info">
+    <i class="fa fa-check" aria-hidden="true"></i>
+    Preview
+  </button>
+  <button type="submit" class="btn btn-success" id="submit">
+    <i class="fa fa-check" aria-hidden="true"></i>
+    Save
+  </button>
+</form>

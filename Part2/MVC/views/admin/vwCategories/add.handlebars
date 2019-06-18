@@ -1,0 +1,28 @@
+<div class="card shadow mt-3">
+    <h5 class="card-header">Category Add</h5>
+    <div class="card-body">
+        <form method="POST">
+            <div class="form-group">
+                <h5>Category Name</h5>
+                <input name="cn" type="text" class="form-control" placeholder="Enter Category name">
+            </div>
+            <h5>Category Parent</h5>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Category Type
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="selector">
+                    {{#each this.categories}}
+                         <a class="d ropdown-item">{{CaName}}</a>
+                    {{/each}}
+                </div>
+            </div>
+            <a class="btn btn-primary mt-4" href="/admin/categories" role="button">
+            <i class="fa fa-backward" aria-hidden="true"></i>List</a>
+            <button type="submit" class="btn btn-success mt-4">
+                <i class="fa fa-check" aria-hidden="true"></i>save</button>
+        </form>
+    </div>
+</div>
+  

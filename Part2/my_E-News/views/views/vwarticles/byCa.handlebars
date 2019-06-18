@@ -1,0 +1,56 @@
+<div class="card shadow">
+  <h4 class="card-header">
+    Articles
+  </h4>
+  
+  <div class="card-body">
+    <div class="row">
+        {{#each this.Articles}}
+   <div class="col-sm-6 col-md-4 col-lg-4 mt-3">
+                <div class="card" style="width:270px;" >
+                    <img class="card-img-top" src="/imgs/articles/{{Photo}}" style="width:250px; height: 150px">
+                    <div class="card-block">
+                        <h4 class="card-title">{{ArTitle}}</h4>
+                        <div class="meta">
+                              <a href="/demo/{{ArID}}/preview" class="btn btn-primary">Learn More</a>
+                        </div>
+                        <div class="card-text">
+                           {{Summary}}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="float-right">{{ArStatus}}</span>
+                        <span><i class="float-left"></i>{{ConfirmedDay}}</span>
+                    </div>
+                </div>
+            </div>
+
+            {{/each}}
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <nav aria-label="...">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            {{#each this.pages}}
+            {{#if active}}
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="javascript:;">{{value}} <span class="sr-only">(current)</span></a>
+            </li>
+            {{else}}
+            <li class="page-item">
+              <a class="page-link" href="?page={{value}}">{{value}}</a>
+            </li>
+            {{/if}}
+            {{/each}}
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

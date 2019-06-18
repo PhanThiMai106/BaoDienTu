@@ -1,0 +1,31 @@
+<div class="card mt-3 shadow">
+    <h3 class="card-header">Tag</h3>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Hash Tag ID</th>
+                    <th scope="col">Tag</th>
+                    <th scope="col">Article ID</th>
+                     <th scope="col"  class="text-right"> <a class="btn btn-outline-success" href="hashtag/add" role="button">
+                            <i class="fa fa-plus" aria-hidden="true"> Add Hash Tag</i>
+                        </a></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this.HashTags}}
+                <tr>
+                    <th scope="row">{{HashID}}</th>
+                    <td>{{Tag}}</td>
+                    <td>{{Article}}</td>
+                    <td class="text-right">
+                        <a class="btn btn-outline-success" href="hashtag/edit/{{HashID}}" role="button">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

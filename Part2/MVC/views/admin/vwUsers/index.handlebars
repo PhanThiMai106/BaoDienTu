@@ -1,0 +1,30 @@
+<div class="card mt-3 shadow">
+    <h3 class="card-header">Category</h3>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Email</th>
+                    <th scope="col"  class="text-right"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this.Users}}
+                <tr>
+                    <th scope="row">{{FullName}}</th>
+                    <td>{{Kind}}</td>
+                    <td>{{Email}}</td>
+
+                    <td class="text-right">
+                        <a class="btn btn-outline-success" href="users/edit/{{UserID}}" role="button">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

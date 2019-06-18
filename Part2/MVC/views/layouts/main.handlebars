@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>E-News</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+        <a class="navbar-brand" href="/admin/MyAccount/{{this.User.UserID}}">Hoàng Nhi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        My articles
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Deny</a>
+                        <a class="dropdown-item" href="#">Aproval</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Waiting</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 mt-5">
+
+                <style>
+                    #nav li a {
+                        text-decoration: none;
+                        color: #2d2f31;
+                    }
+
+                    #nav label {
+                        width: 200px;
+                    }
+
+                    #nav {
+                        width: 200px;
+                        background: #dfd6d6;
+                        margin: 10px;
+                    }
+
+                    #nav span {
+                        padding: 20px;
+                        background: #2d2f31;
+                        color: rgb(253, 251, 251);
+                        font-size: 1.2em;
+                        font-variant: small-caps;
+                        cursor: pointer;
+                        display: block;
+                    }
+
+                    #nav span::after {
+                        float: right;
+                        right: 10%;
+                        content: "+";
+                    }
+
+                    #nav .slide {
+                        clear: both;
+                        width: 100%;
+                        height: 0px;
+                        overflow: hidden;
+
+                        transition: height .3s ease;
+                        list-style-type: none;
+                    }
+
+                    #nav .slide li {
+                        padding: 10px;
+                    }
+
+                    #touch {
+                        position: absolute;
+                        opacity: 0;
+                        height: 0px;
+                    }
+
+                    #touch:checked+.slide {
+                        height: 200px;
+                    }
+
+                    #touch1 {
+                        position: absolute;
+                        opacity: 0;
+                        height: 0px;
+                    }
+
+                    #touch1:checked+.slide {
+                        height: 220px;
+                    }
+
+                    #touch2 {
+                        position: absolute;
+                        opacity: 0;
+                        height: 0px;
+                    }
+
+                    #touch2:checked+.slide {
+                        height: 150px;
+                    }
+
+                    #touch3 {
+                        position: absolute;
+                        opacity: 0;
+                        height: 0px;
+                    }
+
+                    #touch3:checked+.slide {
+                        height: 150px;
+                    }
+                </style>
+
+                <nav id="nav">
+                    <label for="touch"><span><a href="http://localhost:3000/admin/categories/">Categories</a></span></label>
+                    <input type="checkbox" id="touch">
+
+                    <ul class="slide">
+                        {{#each this.categories}} <td></td>
+                        <li><a href="#">{{CaName}}</a></li>
+                        {{/each}}
+
+                    </ul>
+
+                    <label for="touch1"><span><a href="http://localhost:3000/admin/hashtag">Hash Tag</a></span></label>
+                    <input type="checkbox" id="touch1">
+
+                    <ul class="slide">
+                        
+                        <li><a href="#">All</a></li>
+                    </ul>
+
+                    <label for="touch2"><span>Articles</span></label>
+                    <input type="checkbox" id="touch2">
+
+                    <ul class="slide">
+                        <li><a href="#">Wating</a></li>
+                        <li><a href="#">Denied</a></li>
+                        <li><a href="#">Approvel</a></li>
+                    </ul>
+                    <label for="touch3"><span><a href="http://localhost:3000/admin/users">Users</a></span></label>
+                    <input type="checkbox" id="touch3">
+
+                    <ul class="slide">
+                        <li><a href="#">Subcribers</a></li>
+                        <li><a href="#">Writers</a></li>
+                        <li><a href="#">Editers</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-sm-9">
+                {{{body}}}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<div class="card shadow mt-3">
+    <h5 class="card-header">Edit Category</h5>
+    <div class="card-body">
+        {{#if this.error}}
+        <div class="alert alert-danger" role="alert">
+            inValid Category.<a href="/admin/categories" class="alert-link">Go Back</a>
+        </div>
+        {{else}}
+        <form method="POST" action="/admin/categories/update">
+            <div class="form-group">
+
+                <h5>Category ID</h5>
+                <input type="text" class="form-control" name="CaID" value="{{this.category.CaID}}">
+                <h5 class="mt-4">Category Name</h5>
+                <input name="Caname" type="text" class="form-control" value="{{this.category.CaName}}">
+                <h5>Category Parent</h5>
+                <select name="ParentID"  class="custom-select custom-select-lg " >
+                      {{#each allLcCategories}} <td></td>
+                      <option class="form-control" value="{{CaID}}" >{{CaName}}</option>
+                     {{/each}}
+                </select>
+            </div>
+            <a class="btn btn-primary mt-4" href="/admin/categories" role="button">
+                <i class="fa fa-backward" aria-hidden="true"></i>List</a>
+            <button type="submit" class="btn btn-danger mt-4" formaction="/admin/categories/delete">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>Delete</button>
+            <button type="submit" class="btn btn-success mt-4">
+                <i class="fa fa-check" aria-hidden="true"></i>save</button>
+        </form>
+        {{/if}}
+    </div>
+</div>

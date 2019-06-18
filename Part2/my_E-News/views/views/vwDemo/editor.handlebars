@@ -1,0 +1,255 @@
+{{!-- {{#section 'js'}}
+<script
+  src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=ezd73nxbzc7bu6e86g2l82jbbffke0mwevwrnyvc5q8h89j6"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/js/fileinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/themes/fa/theme.min.js"></script>
+<script>
+  $(function () {
+    tinymce.init({
+      selector: '#txtFullDes',
+      height: 500,
+      menubar: false,
+      plugins: 'paste image link autolink lists table media',
+      toolbar: [
+        'undo redo | bold italic underline strikethrough | numlist bullist | alignleft aligncenter alignright',
+        'forecolor backcolor',
+        'table link image media',
+      ],
+    });
+  })
+
+  $(function () {
+    $('#fuMain').fileinput({
+      theme: 'fa',
+      dropZoneEnabled: false,
+      allowedFileExtensions: ['png', 'jpg', 'gif'],
+      uploadUrl: '/upload',
+      uploadAsync: false,
+    });
+  })
+</script>
+{{/section}}
+
+{{#section 'css'}}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/css/fileinput.min.css" media="all"
+  rel="stylesheet" type="text/css" />
+{{/section}}
+
+
+<div class="card shadow">
+  <h4 class="card-header">
+    Upload with Bootstrap FileInput
+  </h4>
+  <div class="card-body">
+    <form method="POST">
+      <div class="form-group">
+        <label for="fuMain">Photo</label>
+        <div class="file-loading">
+          <input id="fuMain" name="fuMain" type="file" multiple>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Save
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="card shadow">
+  <h4 class="card-header">
+    WYSIWYG
+  </h4>
+  <div class="card-body">
+    <form method="POST">
+      <div class="form-group">
+        <label for="txtFullDes">Description</label>
+        <textarea class="form-control" id="txtFullDes" name="FullDes">
+
+          
+        </textarea>
+      </div>
+      <button type="submit" class="btn btn-success">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Save
+      </button>
+    </form>
+  </div>
+</div> --}}
+
+{{#section 'js'}}
+<script
+  src="https://cloud.tinymce.com/5/tinymce.min.js?apiKey=ezd73nxbzc7bu6e86g2l82jbbffke0mwevwrnyvc5q8h89j6"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/js/fileinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/themes/fa/theme.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+  $(function () {
+    tinymce.init({
+      selector: '#txtFullDes',
+      height: 500,
+      menubar: false,
+      plugins: 'paste image link autolink lists table media',
+      toolbar: [
+        'undo redo | bold italic underline strikethrough | numlist bullist | alignleft aligncenter alignright',
+        'forecolor backcolor',
+        'table link image media',
+      ],
+    });
+  })
+
+  $(function () {
+    $('#fuMain').fileinput({
+      theme: 'fa',
+      dropZoneEnabled: false,
+      allowedFileExtensions: ['png', 'jpg', 'gif'],
+      uploadUrl: '/upload',
+      uploadAsync: false,
+    });
+  })
+
+  var toolbarOptions = [
+    ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+    ['blockquote', 'code-block'],
+
+    {{!-- [{ 'header': 1 }, { 'header': 2 }],               // custom button values --}}
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+    [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
+    [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
+    [{ 'direction': 'rtl' }],                         // text direction
+
+    [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+    [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+    [{ 'font': [] }],
+    [{ 'align': [] }],
+    ['link', 'image'],
+    ['clean']                                         // remove formatting button
+
+  ];
+
+  var quill = new Quill('#editor', {
+    modules: {
+      toolbar: toolbarOptions
+    },
+    theme: 'snow'
+  });
+
+  var customButton = document.querySelector('#custom-button');
+
+  customButton.addEventListener('click', function () {
+    console.log('Clicked!');
+  });
+
+  var toolbarOptions = {
+    handlers: {
+      // handlers object will be merged with default handlers object
+      'link': function (value) {
+        if (value) {
+          var href = prompt('Enter the URL');
+          this.quill.format('link', href);
+        } else {
+          this.quill.format('link', false);
+        }
+      }
+    }
+  }
+
+  var toolbar = quill.getModule('toolbar')
+  toolbar.addHandler('image', showImageUI)
+</script>
+{{/section}}
+
+{{#section 'css'}}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.3/css/fileinput.min.css" media="all"
+  rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{{/section}}
+
+
+
+<div class="card shadow">
+  <h4 class="card-header">
+    Writer
+  </h4>
+  <div class="card-body">
+    <form method="POST">
+
+
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="txttitle">Title</label>
+            <input type="text" class="form-control" id="txttitle" name="title" autofocus
+              placeholder="Enter Article Title">
+          </div>
+
+          <div class="form-group">
+            <label for="txtsumary">Summary</label>
+            <input type="text" class="form-control" id="txtsumary" name="sumary" autofocus
+              placeholder="Enter Article Summary">
+          </div>
+
+          <div class="form-group">
+            <label for="txtcategory">Category</label>
+            <select class="browser-default custom-select custom-select-lg mb-3" id="cate_parent">
+
+              {{#each lcCategories}} <td></td>
+              <option>{{CaName}}</option>
+
+              {{/each}}
+
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="txtFullDes">Description</label>
+            <textarea class="form-control" id="txtFullDes" name="FullDes">
+        </textarea>
+          </div>
+
+        </div>
+        <div class="col">
+          <div class="card shadow">
+            <h4 class="card-header">
+              Upload with Bootstrap FileInput
+            </h4>
+            <div class="card-body">
+              <form method="POST">
+                <div class="form-group">
+                  <label for="fuMain">Photo</label>
+                  <div class="file-loading">
+                    <input id="fuMain" name="fuMain" type="file" multiple>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success">
+                  <i class="fa fa-check" aria-hidden="true"></i>
+                  Save
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <a class="btn btn-primary" href="/admin/writer" role="button">
+        <i class="fa fa-backward" aria-hidden="true"></i>
+        List
+      </a>
+      <button type="submit" href="/admin/preview" class="btn btn-info">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Preview
+      </button>
+      <button type="submit" class="btn btn-success">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        Save
+      </button>
+    </form>
+  </div>
